@@ -1,0 +1,17 @@
+@startuml
+actor User as U
+U -> Borne: insertTicket(ticket t)
+Borne --> Borne: checkTicketValide(ticket t)
+
+alt Valide case
+  Borne -> U: calculePrix(p)
+  U -> Borne: paye(p)
+  Borne --> Teleporteur: retirerVehicule(ticket t)
+  Teleporteur -> Teleporteur: retirerVehiculeEmplacement(ticket t)
+  Teleporteur --> Parking: vehiculeEnlever()
+  Teleporteur -> Borne: ramenerVehicule()
+else Non_Valide case
+  Borne --> U: Ticket perimé
+  Borne -> U:RendTicket
+end
+@enduml
