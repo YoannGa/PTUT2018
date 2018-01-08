@@ -3,7 +3,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 	- _id = GUID 87e89bb5-48e9-4737-8e88-8270ed5bb141;
 	- _myState = 8192;
 	- _name = "Default";
-	- _modifiedTimeWeak = 1.8.2018::14:27:52;
+	- _modifiedTimeWeak = 1.8.2018::14:36:5;
 	- _lastID = 32;
 	- Declaratives = { IRPYRawContainer 
 		- size = 2;
@@ -196,7 +196,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 			}
 			- _name = "UC_Utilisateur";
 			- _modifiedTimeWeak = 1.2.1990::0:0:0;
-			- _lastModifiedTime = "1.8.2018::14:8:48";
+			- _lastModifiedTime = "1.8.2018::14:36:7";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID bf04756c-d365-472d-b8da-f58974953e1b;
 				- m_type = 0;
@@ -220,7 +220,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 				}
 				- m_drawBehavior = 0;
 				- m_bIsPreferencesInitialized = 0;
-				- elementList = 23;
+				- elementList = 24;
 				{ CGIClass 
 					- _id = GUID f9cf097f-9916-403c-b787-837e5573b127;
 					- m_type = 78;
@@ -2293,6 +2293,83 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 					}
 					- m_specificType = symmetric_type;
 				}
+				{ CGIInheritance 
+					- _id = GUID 1e3e4ebc-6896-418e-a84f-e9f762c93f70;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "General";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Graphics";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "ShowLabels";
+												- _Value = "False";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 128;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IDependency";
+						- _id = GUID dc36c5e1-5ffb-43a9-8bf7-15a562046073;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "Reccuperer vehicule";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4104;
+					- m_bIsPreferencesInitialized = 1;
+					- m_pSource = GUID 6998b6ea-5a9d-47ed-8c5d-ff4b117a5e96;
+					- m_sourceType = 'F';
+					- m_pTarget = GUID 94d34390-26e2-4d6e-bb17-a0b102d04e16;
+					- m_targetType = 'T';
+					- m_direction = ' ';
+					- m_rpn = { CGIText 
+						- m_str = "include";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 4 -6 -9  52 -9  52 5  -6 5  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_transform = 1 0 0 1 377 293 ;
+						- m_nHorizontalSpacing = 44;
+						- m_nVerticalSpacing = -2;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_anglePoint1 = 0 0 ;
+					- m_anglePoint2 = 0 0 ;
+					- m_line_style = 0;
+					- m_SourcePort = 909 131 ;
+					- m_TargetPort = 925 922 ;
+					- m_ShowName = 0;
+					- m_ShowStereotype = 1;
+				}
 				
 				- m_access = 'Z';
 				- m_modified = 'N';
@@ -2473,7 +2550,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 			}
 			- _name = "UC_Teleporteur";
 			- _modifiedTimeWeak = 1.2.1990::0:0:0;
-			- _lastModifiedTime = "1.8.2018::14:29:10";
+			- _lastModifiedTime = "1.8.2018::14:37:34";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID c6998b64-3cf5-4f7b-8fc1-7ebbc3cb18d4;
 				- m_type = 0;
@@ -3774,7 +3851,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 					}
 					- m_pParent = GUID 129d7785-755e-43f4-ac5c-38ff2fa4abcf;
 					- m_name = { CGIText 
-						- m_str = "Lire tickets";
+						- m_str = "Lire ticket";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -4011,7 +4088,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 					}
 					- m_pParent = ;
 					- m_name = { CGIText 
-						- m_str = "Lire tickets";
+						- m_str = "Lire ticket";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -4529,7 +4606,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 					}
 					- m_pParent = GUID 129d7785-755e-43f4-ac5c-38ff2fa4abcf;
 					- m_name = { CGIText 
-						- m_str = "Retourner place disponibles";
+						- m_str = "Retourner places disponibles";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -4752,7 +4829,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 			}
 		}
 	}
-	- weakCGTime = 1.8.2018::14:27:52;
+	- weakCGTime = 1.8.2018::14:36:5;
 	- strongCGTime = 1.2.1990::0:0:0;
 	- _defaultComposite = GUID 73104e7b-275f-419f-b25d-8b8e25156fb3;
 	- _eventsBaseID = -1;
@@ -4821,8 +4898,35 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 			- _id = GUID 46908d73-6fe6-4907-b955-cd493f84ced7;
 			- _myState = 8192;
 			- _name = "Payer";
+			- Dependencies = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IDependency 
+					- _id = GUID dc36c5e1-5ffb-43a9-8bf7-15a562046073;
+					- _myState = 2048;
+					- _name = "Reccuperer vehicule";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "include";
+							- _id = GUID 17ef9a2f-cb89-11d5-b5bf-00d0b780aafd;
+						}
+					}
+					- _modifiedTimeWeak = 1.8.2018::14:36:5;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 4b8afab3-a156-4c96-a8e8-86377d8772c6;
+					}
+				}
+			}
 			- _modifiedTimeWeak = 1.2.1990::0:0:0;
-			- weakCGTime = 1.2.1990::0:0:0;
+			- _lastID = 1;
+			- weakCGTime = 1.8.2018::14:36:5;
 			- strongCGTime = 1.2.1990::0:0:0;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
@@ -5334,7 +5438,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 				{ IDependency 
 					- _id = GUID 75458f24-3d16-4d99-99ad-d15c41aa22e2;
 					- _myState = 2048;
-					- _name = "Lire tickets";
+					- _name = "Lire ticket";
 					- _modifiedTimeWeak = 1.8.2018::14:23:8;
 					- _dependsOn = { INObjectHandle 
 						- _m2Class = "IUseCase";
@@ -5443,7 +5547,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 		{ IUseCase 
 			- _id = GUID 3385f138-2fdb-472a-9864-c0094b2b4535;
 			- _myState = 8192;
-			- _name = "Lire tickets";
+			- _name = "Lire ticket";
 			- _modifiedTimeWeak = 1.2.1990::0:0:0;
 			- weakCGTime = 1.2.1990::0:0:0;
 			- strongCGTime = 1.2.1990::0:0:0;
@@ -5566,7 +5670,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 		{ IUseCase 
 			- _id = GUID 5090271c-1f3f-432e-8386-8e7ec2883cfe;
 			- _myState = 8192;
-			- _name = "Retourner place disponibles";
+			- _name = "Retourner places disponibles";
 			- _modifiedTimeWeak = 1.2.1990::0:0:0;
 			- weakCGTime = 1.2.1990::0:0:0;
 			- strongCGTime = 1.2.1990::0:0:0;
@@ -5839,8 +5943,8 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 			- _id = GUID 4ac47380-e90c-4208-89d1-c8c8f7dc53d2;
 			- _myState = 8192;
 			- _name = "Borne";
-			- _modifiedTimeWeak = 1.8.2018::14:21:56;
-			- weakCGTime = 1.8.2018::14:21:56;
+			- _modifiedTimeWeak = 1.8.2018::14:37:34;
+			- weakCGTime = 1.8.2018::14:37:34;
 			- strongCGTime = 1.8.2018::13:53:3;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
@@ -5870,7 +5974,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 				{ IAssociationEnd 
 					- _id = GUID a9f7289d-3632-4fa0-b9d2-8818b6d85d78;
 					- _myState = 10240;
-					- _name = "itsLire tickets";
+					- _name = "itsLire ticket";
 					- _modifiedTimeWeak = 1.2.1990::0:0:0;
 					- _multiplicity = "1";
 					- _otherClass = { IClassifierHandle 
@@ -5962,8 +6066,8 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 			- _id = GUID 53264c4c-84ab-4d1e-affb-7186749eb939;
 			- _myState = 8192;
 			- _name = "Parking";
-			- _modifiedTimeWeak = 1.8.2018::14:29:10;
-			- weakCGTime = 1.8.2018::14:29:10;
+			- _modifiedTimeWeak = 1.8.2018::14:37:25;
+			- weakCGTime = 1.8.2018::14:37:25;
 			- strongCGTime = 1.8.2018::14:23:41;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
@@ -6011,7 +6115,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 				{ IAssociationEnd 
 					- _id = GUID c80c9a4d-aca2-4777-93d9-5ee5de4916bd;
 					- _myState = 10240;
-					- _name = "itsRetourner place disponibles";
+					- _name = "itsRetourner places disponibles";
 					- _modifiedTimeWeak = 1.2.1990::0:0:0;
 					- _multiplicity = "1";
 					- _otherClass = { IClassifierHandle 
