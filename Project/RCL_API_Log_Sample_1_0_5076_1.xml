@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="RCL_Log.xsl"?>
+<RCL_Log>
+<Product>Sample</Product>
+<Version>1.0</Version>
+<TimeStamp>2018-01-09T10:26:23+01:00</TimeStamp>
+<Record>
+<Thread_Id>2444</Thread_Id>
+<Event>General</Event>
+<Text>RCL Client Version</Text>
+<Desc>Release :- 8.1.4.7; Build :- RCL8147-I20150409_1307</Desc>
+</Record>
+<Record>
+<Thread_Id>2444</Thread_Id>
+<Event>General</Event>
+<Text>The RCL Log Configuration file wasn't found.</Text>
+<Desc>C:\Users\Default\IBM\Rational\Rhapsody\8.1.5x64\Share\Log\LicenseLog</Desc>
+</Record>
+</RCL_Log>
