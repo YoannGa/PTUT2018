@@ -7,8 +7,8 @@ alt Valide case
   Borne -> U: calculePrix(p)
   U -> Borne: paye(p)
   Borne -> Teleporteur: retirerVehicule(ticket t)
-  Teleporteur -> Teleporteur: retirerVehiculeEmplacement(ticket t)
-  Teleporteur -> Parking: vehiculeEnlever()
+  Teleporteur -> Parking: retirerVehiculeEmplacement(ticket t)
+  Parking -> Parking: vehiculeEnlever()
 else Non_Valide case
   Borne -> U:RendTicket()
 end

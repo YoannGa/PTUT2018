@@ -5,10 +5,11 @@ title Class Diagram
 
 class Client {
   - String name
-  - Ticket ticket
-  +void getPlace()
-  +void pay()
+  - ArrayList<Ticket> mesTicket
+  +void payer()
   +void getBackVehicule()
+  +void insertTicket(Ticket t, Borne b)
+  + void demanderTicket(Borne b)
 }
 
 class Abonne {
@@ -19,28 +20,56 @@ class Abonne {
 }
 
 class Teleporteur{
-
+  -Parking monParking
+  -ArrayList<Parking> parkingConnus
+  + void retirerVehiculeEmplacement(ticket t)
+  + boolean aPlaceDansMonParking()
+  + void ajouterVehiculeEmplacement(Vehicule v)
 }
 
 class Parking{
-
+  - ArrayList<Vehicule> vGarer
+  - int nbPlaceMax
+  - int nbPlacePrise
+  + void vehiculeEnlever()
+  + void vehiculeAjouter(Vehicule v)
+  + boolean estPlein()
 }
 
 class Borne{
+  -Camera maCam
+  -Teleporteur monTP
+
+  + void retirerVehicule(ticket t)
+  + void ajouterVehicule(Vehicule v)
+
+  + void demanderPaiement(p)
+
+  + boolean verifPlaceDispo()
+
+  + Ticket nouveauTicket()
+  + void delivrerTicket(Ticket t)
+  + void rendreTicket()
+  + boolean verifTicketValide(ticket t)
 
 }
 
 class Camera{
-
+  +Vehicule scanNewVehicule()
 
 }
 
 class Vehicule{
-
+  -float longueur
+  -float largeur
+  -float hauteur
+  -String plaqueIma
+  +float getVolume()
 }
 
 class Ticket{
-
+  -Parking p
+  -int emplacement
 }
 
 Parking --o Vehicule
