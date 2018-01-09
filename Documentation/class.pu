@@ -1,6 +1,6 @@
 @startuml
 
-title Class Diagram
+title Diagramme de Classes Parking
 
 
 class Client {
@@ -76,7 +76,7 @@ Parking --o Vehicule
 Ticket -- Borne
 Client -o Ticket
 Client <|-- Abonne
-Borne -- Teleporteur
+Borne --* Teleporteur
 Camera *- Borne
 Teleporteur -o Parking
 Teleporteur -* Parking
