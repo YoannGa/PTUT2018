@@ -9,9 +9,7 @@ alt Valide case
   Borne --> Teleporteur: retirerVehicule(ticket t)
   Teleporteur -> Teleporteur: retirerVehiculeEmplacement(ticket t)
   Teleporteur --> Parking: vehiculeEnlever()
-  Teleporteur -> Borne: ramenerVehicule()
 else Non_Valide case
-  Borne --> U: Ticket perimé
-  Borne -> U:RendTicket
+  Borne -> U:RendTicket()
 end
 @enduml
