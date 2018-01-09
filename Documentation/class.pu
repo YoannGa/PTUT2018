@@ -1,0 +1,15 @@
+@startuml
+
+title Class Diagram
+
+
+class Client {
+  - String name
+}
+
+class Abonne {
+
+}
+
+Client <|-- Abonne
+@enduml
