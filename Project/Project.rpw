@@ -39,8 +39,8 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -60,10 +60,10 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 				- _id = GUID a1b77342-3448-44ad-96d5-24875d3eb0ab;
 			}
 			- _UpLeft = 0 250 ;
-			- _DownRight = 1751 1072 ;
+			- _DownRight = 484 743 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 2;
-			- m_bIsActiveView = 1;
+			- m_bIsActiveView = 0;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -117,8 +117,8 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 				- _name = "UC_Teleporteur";
 				- _id = GUID 654f2437-d235-42a1-a68c-6580cd7e1203;
 			}
-			- _UpLeft = 0 20 ;
-			- _DownRight = 127 533 ;
+			- _UpLeft = 0 58 ;
+			- _DownRight = 127 571 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 1;
 			- m_bIsActiveView = 0;
@@ -126,8 +126,8 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -146,11 +146,11 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 				- _name = "UC_Utilisateur";
 				- _id = GUID 90929ae2-2e1f-4e8b-a9e4-fcc5e9132953;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 127 513 ;
+			- _UpLeft = 0 38 ;
+			- _DownRight = 1394 880 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 0;
-			- m_bIsActiveView = 0;
+			- m_bIsActiveView = 1;
 		}
 	}
 	- _fullName = "Z:\\PTUT2018\\PTUT2018\\Project\\Project";
