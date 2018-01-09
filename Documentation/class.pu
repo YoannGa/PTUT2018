@@ -5,7 +5,6 @@ title Class Diagram
 
 class Client {
   - String name
-  - double argent
   - Ticket ticket
   +void getPlace()
   +void pay()
@@ -45,10 +44,12 @@ class Ticket{
 }
 
 Parking --o Vehicule
-Ticket -> Parking
+Ticket -- Borne
 Client -o Ticket
 Client <|-- Abonne
-Borne -> Teleporteur
-Camera o- Borne
+Borne -- Teleporteur
+Camera *- Borne
 Teleporteur -o Parking
+Teleporteur -* Parking
+
 @enduml
