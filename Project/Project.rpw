@@ -10,8 +10,8 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -30,17 +30,17 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 				- _name = "UC_Teleporteur";
 				- _id = GUID 654f2437-d235-42a1-a68c-6580cd7e1203;
 			}
-			- _UpLeft = 0 80 ;
-			- _DownRight = 1314 556 ;
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1255 758 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 0;
-			- m_bIsActiveView = 0;
+			- m_bIsActiveView = 1;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -59,14 +59,14 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 				- _name = "UC_Utilisateur";
 				- _id = GUID 90929ae2-2e1f-4e8b-a9e4-fcc5e9132953;
 			}
-			- _UpLeft = 0 11 ;
-			- _DownRight = 1732 844 ;
+			- _UpLeft = 0 66 ;
+			- _DownRight = 1460 595 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 1;
-			- m_bIsActiveView = 1;
+			- m_bIsActiveView = 0;
 		}
 	}
-	- _fullName = "Z:\\PTUT2018\\Project\\Project";
+	- _fullName = "Z:\\PTUT2018\\PTUT2018\\Project\\Project";
 	- m_SearchScopeList = { IRPYRawContainer 
 		- size = 0;
 	}
