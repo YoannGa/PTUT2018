@@ -30,8 +30,8 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 				- _name = "SEQ_Garer_Vehicule";
 				- _id = GUID a1b77342-3448-44ad-96d5-24875d3eb0ab;
 			}
-			- _UpLeft = 0 380 ;
-			- _DownRight = 1751 1202 ;
+			- _UpLeft = 0 10 ;
+			- _DownRight = 1751 832 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 2;
 			- m_bIsActiveView = 1;
