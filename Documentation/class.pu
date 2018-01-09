@@ -5,11 +5,50 @@ title Class Diagram
 
 class Client {
   - String name
+  - double argent
+  - Ticket ticket
+  +void getPlace()
+  +void pay()
+  +void getBackVehicule()
 }
 
 class Abonne {
+  -int numAbonne
+  +void makeEntretien()
+  +void makemaintenance()
+  +void setLivraison()
+}
+
+class Teleporteur{
 
 }
 
+class Parking{
+
+}
+
+class Borne{
+
+}
+
+class Camera{
+
+
+}
+
+class Vehicule{
+
+}
+
+class Ticket{
+
+}
+
+Parking --o Vehicule
+Ticket -> Parking
+Client -o Ticket
 Client <|-- Abonne
+Borne -> Teleporteur
+Camera o- Borne
+Teleporteur -o Parking
 @enduml
