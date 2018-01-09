@@ -5,13 +5,42 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 	}
 	- isLoadOnDemand = 0;
 	- myViewsWithID = { IRPYRawContainer 
-		- size = 4;
+		- size = 5;
 		- value = 
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 0;
+				- m_nTop = 0;
+				- m_nRight = 1140;
+				- m_nBottom = 588;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "";
+				- _name = "DC";
+				- _id = GUID 1ffef30f-cd67-47e4-afbf-2a0c73e4439b;
+			}
+			- _UpLeft = 40 0 ;
+			- _DownRight = 1143 529 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 4;
+			- m_bIsActiveView = 0;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -30,17 +59,17 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 				- _name = "SEQ_Garer_Vehicule";
 				- _id = GUID a1b77342-3448-44ad-96d5-24875d3eb0ab;
 			}
-			- _UpLeft = 0 517 ;
-			- _DownRight = 1751 1339 ;
+			- _UpLeft = 0 405 ;
+			- _DownRight = 484 898 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 2;
-			- m_bIsActiveView = 1;
+			- m_bIsActiveView = 0;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -60,10 +89,10 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 				- _id = GUID ebe3cb88-7d5a-4d0f-89f9-a32a7cf2a8c2;
 			}
 			- _UpLeft = 0 30 ;
-			- _DownRight = 1103 539 ;
+			- _DownRight = 775 836 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 3;
-			- m_bIsActiveView = 0;
+			- m_bIsActiveView = 1;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
