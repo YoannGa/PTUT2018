@@ -30,8 +30,8 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 				- _name = "DC";
 				- _id = GUID 1ffef30f-cd67-47e4-afbf-2a0c73e4439b;
 			}
-			- _UpLeft = 40 0 ;
-			- _DownRight = 1143 529 ;
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1103 529 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 4;
 			- m_bIsActiveView = 0;
@@ -59,8 +59,8 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 				- _name = "SEQ_Garer_Vehicule";
 				- _id = GUID a1b77342-3448-44ad-96d5-24875d3eb0ab;
 			}
-			- _UpLeft = 0 32 ;
-			- _DownRight = 1751 854 ;
+			- _UpLeft = 0 250 ;
+			- _DownRight = 1751 1072 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 2;
 			- m_bIsActiveView = 1;
