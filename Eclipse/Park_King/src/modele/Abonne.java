@@ -19,4 +19,12 @@ public class Abonne extends Client{
 	public void makeEntretiens(){
 		//TODO
 	}
+	
+	public void makeMaintenance(){
+		//TODO
+	}
+	
+	public void setiVraison(){
+		//TODO
+	}
 }
