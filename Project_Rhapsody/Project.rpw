@@ -10,35 +10,6 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -8;
-				- m_ptMaxPositionY = -30;
-				- m_nLeft = 175;
-				- m_nTop = 175;
-				- m_nRight = 1315;
-				- m_nBottom = 763;
-			}
-			- _wasOpenedOnCloseProject = 1;
-			- _theDiagram = { IHandle 
-				- _m2Class = "IActivityDiagram";
-				- _filename = "Default.sbs";
-				- _subsystem = "Default";
-				- _class = "TopLevel";
-				- _name = "ActivityDiagram";
-				- _id = GUID 73d54b6f-5e3d-4ab2-8eca-64e655a52679;
-			}
-			- _UpLeft = 0 91 ;
-			- _DownRight = 1061 736 ;
-			- _instanceName = "";
-			- m_nDiagramIndex = 5;
-			- m_bIsActiveView = 1;
-		}
-		{ CGEMdiDiagramParams 
-			- _placement = { CCommon_WINDOWPLACEMENT 
-				- m_nLength = 44;
 				- m_nFlags = 0;
 				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
@@ -62,7 +33,7 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 			- _UpLeft = 0 0 ;
 			- _DownRight = 777 372 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 1;
+			- m_nDiagramIndex = 0;
 			- m_bIsActiveView = 0;
 		}
 		{ CGEMdiDiagramParams 
@@ -88,11 +59,40 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 				- _name = "SEQ_Garer_Vehicule";
 				- _id = GUID a1b77342-3448-44ad-96d5-24875d3eb0ab;
 			}
-			- _UpLeft = 0 405 ;
-			- _DownRight = 484 898 ;
+			- _UpLeft = 47 292 ;
+			- _DownRight = 702 960 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 3;
+			- m_bIsActiveView = 0;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
+				- m_ptMinPositionX = -1;
+				- m_ptMinPositionY = -1;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -30;
+				- m_nLeft = 150;
+				- m_nTop = 150;
+				- m_nRight = 1290;
+				- m_nBottom = 738;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IMSC";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "";
+				- _name = "SEQ_Reprendre_Vehicule";
+				- _id = GUID ebe3cb88-7d5a-4d0f-89f9-a32a7cf2a8c2;
+			}
+			- _UpLeft = 0 0 ;
+			- _DownRight = 711 739 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 4;
-			- m_bIsActiveView = 0;
+			- m_bIsActiveView = 1;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -120,7 +120,7 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 			- _UpLeft = 0 98 ;
 			- _DownRight = 127 611 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 3;
+			- m_nDiagramIndex = 2;
 			- m_bIsActiveView = 0;
 		}
 		{ CGEMdiDiagramParams 
@@ -149,11 +149,11 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 			- _UpLeft = 0 28 ;
 			- _DownRight = 127 541 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 2;
+			- m_nDiagramIndex = 1;
 			- m_bIsActiveView = 0;
 		}
 	}
-	- _fullName = "C:\\Users\\yoann.gathignol\\Downloads\\PTUT2018-5b52f2d7b5f79e90c264d0a12183460e041a2c44\\Project\\Project";
+	- _fullName = "Z:\\PTUT2018\\Project_Rhapsody\\Project";
 	- m_SearchScopeList = { IRPYRawContainer 
 		- size = 0;
 	}
