@@ -33,7 +33,7 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 			- _UpLeft = 0 0 ;
 			- _DownRight = 777 372 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 5;
+			- m_nDiagramIndex = 1;
 			- m_bIsActiveView = 0;
 		}
 		{ CGEMdiDiagramParams 
@@ -60,7 +60,7 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 				- _id = GUID 1ffef30f-cd67-47e4-afbf-2a0c73e4439b;
 			}
 			- _UpLeft = 0 0 ;
-			- _DownRight = 884 843 ;
+			- _DownRight = 1091 971 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 4;
 			- m_bIsActiveView = 1;
@@ -88,10 +88,10 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 				- _name = "SEQ_Garer_Vehicule";
 				- _id = GUID a1b77342-3448-44ad-96d5-24875d3eb0ab;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 1059 1079 ;
+			- _UpLeft = 0 215 ;
+			- _DownRight = 538 763 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 2;
+			- m_nDiagramIndex = 5;
 			- m_bIsActiveView = 0;
 		}
 		{ CGEMdiDiagramParams 
@@ -117,10 +117,10 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 				- _name = "SEQ_Reprendre_Vehicule";
 				- _id = GUID ebe3cb88-7d5a-4d0f-89f9-a32a7cf2a8c2;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 1011 467 ;
+			- _UpLeft = 0 10 ;
+			- _DownRight = 1011 477 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 3;
+			- m_nDiagramIndex = 0;
 			- m_bIsActiveView = 0;
 		}
 		{ CGEMdiDiagramParams 
@@ -149,7 +149,7 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 			- _UpLeft = 0 98 ;
 			- _DownRight = 127 611 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 1;
+			- m_nDiagramIndex = 3;
 			- m_bIsActiveView = 0;
 		}
 		{ CGEMdiDiagramParams 
@@ -178,7 +178,7 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 			- _UpLeft = 0 28 ;
 			- _DownRight = 127 541 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 0;
+			- m_nDiagramIndex = 2;
 			- m_bIsActiveView = 0;
 		}
 	}
