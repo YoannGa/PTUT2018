@@ -3,7 +3,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 	- _id = GUID 87e89bb5-48e9-4737-8e88-8270ed5bb141;
 	- _myState = 8192;
 	- _name = "Default";
-	- _modifiedTimeWeak = 1.11.2018::8:52:50;
+	- _modifiedTimeWeak = 1.11.2018::10:5:3;
 	- _lastID = 49;
 	- Declaratives = { IRPYRawContainer 
 		- size = 5;
@@ -196,7 +196,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 			}
 			- _name = "UC_Utilisateur";
 			- _modifiedTimeWeak = 1.2.1990::0:0:0;
-			- _lastModifiedTime = "1.9.2018::15:37:45";
+			- _lastModifiedTime = "1.11.2018::10:5:3";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID bf04756c-d365-472d-b8da-f58974953e1b;
 				- m_type = 0;
@@ -1704,7 +1704,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 					}
 					- m_pParent = GUID f9cf097f-9916-403c-b787-837e5573b127;
 					- m_name = { CGIText 
-						- m_str = "Super Abonne";
+						- m_str = "Super_Abonne";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -11665,7 +11665,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 			}
 		}
 	}
-	- weakCGTime = 1.11.2018::8:52:50;
+	- weakCGTime = 1.11.2018::10:5:3;
 	- strongCGTime = 1.10.2018::9:7:14;
 	- _defaultComposite = GUID 73104e7b-275f-419f-b25d-8b8e25156fb3;
 	- _eventsBaseID = -1;
@@ -17754,7 +17754,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 				{ IAssociationEnd 
 					- _id = GUID e262ccb6-e858-46d0-96a5-aa0e0080d04f;
 					- _myState = 10240;
-					- _name = "itsSuper Abonne";
+					- _name = "itsSuper_Abonne";
 					- _modifiedTimeWeak = 1.2.1990::0:0:0;
 					- _multiplicity = "1";
 					- _otherClass = { IClassifierHandle 
@@ -18207,10 +18207,10 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 		{ IActor 
 			- _id = GUID 0f451047-5fab-49bc-8478-dbffe57ab19d;
 			- _myState = 8192;
-			- _name = "Super Abonne";
-			- _modifiedTimeWeak = 1.9.2018::15:24:54;
-			- weakCGTime = 1.9.2018::15:24:54;
-			- strongCGTime = 1.9.2018::15:24:25;
+			- _name = "Super_Abonne";
+			- _modifiedTimeWeak = 1.11.2018::10:5:3;
+			- weakCGTime = 1.11.2018::10:5:3;
+			- strongCGTime = 1.11.2018::10:5:3;
 			- Inheritances = { IRPYRawContainer 
 				- size = 1;
 				- value = 
