@@ -35,9 +35,8 @@ public class Vehicule {
     
     
     //## operation getVolume() 
-    public void getVolume() {
-        //#[ operation getVolume() 
-        //#]
+    public float getVolume() {
+    	return longueur * largeur * hauteur ;
     }
     
 }

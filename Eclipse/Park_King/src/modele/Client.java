@@ -25,13 +25,27 @@ public class Client {
     
     protected String name;		//## attribute name 
     
-    protected ArrayList<Ticket> tickets;		//## attribute tickets 
+    protected ArrayList<Ticket> listeTickets;		//## attribute tickets 
     
     protected ArrayList<Vehicule> listeVehicule;		//## attribute listeVehicule 
     
-    protected LinkedList<Ticket> itsDC_Ticket = new LinkedList<Ticket>();		//## link itsDC_Ticket 
+   
     
-    protected LinkedList<Vehicule> itsDC_Vehicule = new LinkedList<Vehicule>();		//## link itsDC_Vehicule 
+    
+    public Client(String n){
+    	this.name = n;
+    	this.listeTickets = new ArrayList<>();
+    	
+    	
+    }
+    
+    public Client(String n, Vehicule v, Ticket t){
+    	this.name = n;
+    	this.listeTickets = new ArrayList<>();
+    	this.listeVehicule = new ArrayList<>();
+    	this.listeTickets.add(t);
+    	this.listeVehicule.add(v);
+    }
     
     
     /**

@@ -21,7 +21,12 @@ package modele;
 //## class DC_Abonne 
 public class Abonne extends Client {
     
-    protected int numAbonne;		//## attribute numAbonne 
+    public Abonne(String n) {
+		super(n);
+		// TODO Auto-generated constructor stub
+	}
+
+	protected int numAbonne;		//## attribute numAbonne 
     
     
     //## operation makeEntretien() 

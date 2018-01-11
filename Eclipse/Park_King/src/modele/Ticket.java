@@ -20,6 +20,7 @@ package modele;
 
 //## class DC_Ticket 
 public class Ticket {
+	protected Vehicule v;
     
     protected Parking p;		//## attribute p 
     
@@ -28,6 +29,30 @@ public class Ticket {
     protected Borne itsDC_Borne;		//## link itsDC_Borne 
     
     protected Client itsDC_Client;		//## link itsDC_Client 
+
+	public Vehicule getV() {
+		return v;
+	}
+
+	public void setV(Vehicule v) {
+		this.v = v;
+	}
+
+	public Parking getP() {
+		return p;
+	}
+
+	public void setP(Parking p) {
+		this.p = p;
+	}
+
+	public int getNumEmplacement() {
+		return numEmplacement;
+	}
+
+	public void setNumEmplacement(int numEmplacement) {
+		this.numEmplacement = numEmplacement;
+	}
     
 }
 /*********************************************************************

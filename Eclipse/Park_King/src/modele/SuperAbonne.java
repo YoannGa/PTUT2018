@@ -22,7 +22,12 @@ package modele;
 public class SuperAbonne extends Abonne {
     
     
-    //## operation gererPackVIP() 
+    public SuperAbonne(String n) {
+		super(n);
+		// TODO Auto-generated constructor stub
+	}
+
+	//## operation gererPackVIP() 
     public void gererPackVIP() {
         //#[ operation gererPackVIP() 
         //#]

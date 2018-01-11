@@ -25,20 +25,14 @@ public class Borne {
     
     protected Teleporteur tp;		//## attribute tp 
     
-    protected Camera itsDC_Camera;		//## link itsDC_Camera 
-    
-    protected Teleporteur itsDC_Teleporteur;		//## link itsDC_Teleporteur 
-    
-    protected Ticket itsDC_Ticket;		//## link itsDC_Ticket 
-    
+   
     
     /**
      * @param t
     */
     //## operation activerGarer(Ticket) 
     public void activerGarer(Ticket t) {
-        //#[ operation activerGarer(Ticket) 
-        //#]
+        this.tp.garerVehicule(t);
     }
     
     /**
@@ -46,8 +40,7 @@ public class Borne {
     */
     //## operation activerRetrait(Ticket) 
     public void activerRetrait(Ticket t) {
-        //#[ operation activerRetrait(Ticket) 
-        //#]
+        this.tp.retirerVehicule(t);
     }
     
     /**
@@ -55,8 +48,7 @@ public class Borne {
     */
     //## operation demanderPaiement(Ticket) 
     public void demanderPaiement(Ticket t) {
-        //#[ operation demanderPaiement(Ticket) 
-        //#]
+        System.out.println("plz payez, giv money, am poor, need food :3");
     }
     
     /**

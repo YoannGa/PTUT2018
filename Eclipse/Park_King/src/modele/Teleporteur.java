@@ -27,7 +27,7 @@ public class Teleporteur {
     
     protected ArrayList<Parking> parkingTiers;		//## attribute parkingTiers 
     
-    protected Borne itsDC_Borne;		//## link itsDC_Borne 
+ 
     
     /*
     protected LinkedList<DC_Parking> itsDC_Parking = new LinkedList<DC_Parking>();		//## link itsDC_Parking 
@@ -40,7 +40,7 @@ public class Teleporteur {
      * @param emplacement
     */
     //## operation garerVehicule(Vehicule,int) 
-    public void garerVehicule(Vehicule v, int emplacement) {
+    public void garerVehicule(Ticket t) {
         //#[ operation garerVehicule(Vehicule,int) 
         //#]
     }
