@@ -55,10 +55,41 @@ public class Teleporteur {
     }
     
     //## operation verifPlaceDispo() 
-    public boolean verifPlaceDispo() {
-		return false;
-        //#[ operation verifPlaceDispo() 
-        //#]
+    public boolean verifPlaceDispo(Vehicule v, Parking p) {
+    	boolean placeDispo = false;
+    	
+    	if(v.getType().equals("Voiture")&&p.placeVoitureDispo()) {  		
+    		placeDispo = true;
+    	}else if(v.getType().equals("DeuxRoues")&&p.placeDeuxRouesDispo()) {  		
+    			placeDispo = true;
+    		}else if(v.getType().equals("PoidsLourds")&&p.placePoidsLourdsDispo()) {  		
+    			placeDispo = true;
+        		}    	
+		return placeDispo;
+        
+    }
+    
+   
+    public Parking assignerParking(Vehicule v) {
+    	Parking p = null;
+    	if (this.verifPlaceDispo(v, this.parking)) {
+    		p = this.parking;
+    	}else {
+    		for(Parking p2 : this.parkingTiers) {
+    			if (this.verifPlaceDispo(v, p2)) {
+    	    		p = this.parking;
+    	    	}
+    		}
+    		
+    	}
+    	
+    	
+    	return p;
+    }
+    public int assignerNewEmplacement(Vehicule v, Parking p) {
+    	
+    	
+    	return p.;
     }
     
 }

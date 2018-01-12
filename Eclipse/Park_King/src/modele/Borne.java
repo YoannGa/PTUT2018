@@ -55,9 +55,10 @@ public class Borne {
      * @param c
     */
     //## operation nouveauTicket(Client) 
-    public void nouveauTicket(Client c) {
-        //#[ operation nouveauTicket(Client) 
-        //#]
+    public void nouveauTicket(Client c, Vehicule v) {
+    	
+    	Parking p = this.tp.assignerParking(v);
+    	Ticket t = new Ticket( , );   	
     }
     
     //## operation rendreTicket() 
@@ -69,12 +70,7 @@ public class Borne {
     /**
      * @param p
     */
-    //## operation verifPlaceDispo(Parking) 
-    public boolean verifPlaceDispo(Parking p) {
-		return false;
-        //#[ operation verifPlaceDispo(Parking) 
-        //#]
-    }
+    
     
     /**
      * @param t

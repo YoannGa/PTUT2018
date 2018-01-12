@@ -34,6 +34,12 @@ public class Parking {
     protected HashSet<Integer> emplacementsDeuxRoues;		//## attribute emplacementsDeuxRoues 
     
     protected HashSet<Integer> emplacementsLourds;		//## attribute emplacementsLourds 
+    
+    protected int nbVoituresMax;
+    
+    protected int nbDeuxRouesMax;
+    
+    protected int nbPoidsLourdsMax;
    
     /*
     protected DC_Teleporteur itsDC_Teleporteur;		//## link itsDC_Teleporteur 
@@ -53,9 +59,16 @@ public class Parking {
     }
     
     //## operation estPlein() 
-    public void estPlein() {
-        //#[ operation estPlein() 
-        //#]
+    public boolean placeVoitureDispo() {
+        return listeVoitures.size() < this.nbVoituresMax;
+    }
+    
+    public boolean placeDeuxRouesDispo() {
+        return listeDeuxRoues.size() < this.nbDeuxRouesMax;
+    }
+    
+    public boolean placePoidsLourdsDispo() {
+        return listePoidsLourds.size() < this.nbPoidsLourdsMax;
     }
     
 }

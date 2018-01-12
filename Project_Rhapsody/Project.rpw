@@ -59,8 +59,8 @@ I-Logix-RPY-Archive version 8.12.0 * 9728113
 				- _name = "DC";
 				- _id = GUID 1ffef30f-cd67-47e4-afbf-2a0c73e4439b;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 1301 786 ;
+			- _UpLeft = 0 32 ;
+			- _DownRight = 1565 978 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 4;
 			- m_bIsActiveView = 1;

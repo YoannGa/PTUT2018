@@ -78,6 +78,30 @@ public class Client {
         //#[ operation recupVehicule() 
         //#]
     }
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public ArrayList<Ticket> getListeTickets() {
+		return listeTickets;
+	}
+
+	public void setListeTickets(ArrayList<Ticket> listeTickets) {
+		this.listeTickets = listeTickets;
+	}
+
+	public ArrayList<Vehicule> getListeVehicule() {
+		return listeVehicule;
+	}
+
+	public void setListeVehicule(ArrayList<Vehicule> listeVehicule) {
+		this.listeVehicule = listeVehicule;
+	}
     
 }
 /*********************************************************************
