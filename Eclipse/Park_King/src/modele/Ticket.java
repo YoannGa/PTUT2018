@@ -26,9 +26,13 @@ public class Ticket {
     
     protected int numEmplacement;		//## attribute numEmplacement 
     
-    protected Borne itsDC_Borne;		//## link itsDC_Borne 
+    public Ticket(Vehicule v, Parking p, int num) {
+    	this.v = v;
+    	this.p = p;
+    	this.numEmplacement = num;    	
+    }
     
-    protected Client itsDC_Client;		//## link itsDC_Client 
+   
 
 	public Vehicule getV() {
 		return v;
