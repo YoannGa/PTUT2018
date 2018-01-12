@@ -48,7 +48,7 @@
 					</AnchorPane>
 		        </items>
 		    </SplitPane>
-		    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="18.0" prefWidth="600.0" SplitPane.resizableWithParent="false">
+		    <AnchorPane maxHeight="40.0" minHeight="20.0" minWidth="0.0" prefHeight="30.0" prefWidth="592.0" SplitPane.resizableWithParent="false">
 		        <children>
 		            <Button mnemonicParsing="false" text="Nouveau Veicule" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
 		            <Button mnemonicParsing="false" text="Retour" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />           
