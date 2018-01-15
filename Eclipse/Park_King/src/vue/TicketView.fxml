@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -21,14 +22,14 @@
 		        		<children>
 							<TableView prefHeight="398.0" prefWidth="295.0">
 				        		<columns>
-				          		   	<TableColumn prefWidth="294.0" text="Vehicules" />
+				          		   	<TableColumn prefWidth="294.0" text="Ticket" />
 				          		</columns>
 				        	</TableView>
 		            	</children>
 					</AnchorPane>
 		          	<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
 		        		<children>			
-				            <GridPane layoutX="16.0" layoutY="2.0">
+				            <GridPane layoutX="20.0" layoutY="6.0">
 				               <columnConstraints>
 				                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 				                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -39,19 +40,21 @@
 				                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 				               </rowConstraints>
 				               <children>
-				                  <Label prefHeight="48.0" prefWidth="175.0" text="Plaque :" />
-				                  <Label text="Longueur :" GridPane.rowIndex="1" />
-				                  <Label text="Largeur :" GridPane.rowIndex="2" />
+				                  <Label prefHeight="48.0" prefWidth="175.0" text="Parking :" />
+				                  <Label text="N° Place :" GridPane.rowIndex="1" />
+				                  <Label text="Vehicule : " GridPane.rowIndex="2" />
 				               </children>
 				            </GridPane>
-                        <Button layoutX="13.0" layoutY="96.0" mnemonicParsing="false" text="Garer" />
+                        <CheckBox layoutX="26.0" layoutY="119.0" mnemonicParsing="false" text="Maintenance" />
+                        <CheckBox layoutX="26.0" layoutY="158.0" mnemonicParsing="false" text="Entretien" />
+                        <Button layoutX="24.0" layoutY="190.0" mnemonicParsing="false" text="Recuperer Vehicule" />
+                        <Button layoutX="24.0" layoutY="227.0" mnemonicParsing="false" text="Gestion livraison" />
 		               </children>
 					</AnchorPane>
 		        </items>
 		    </SplitPane>
 		    <AnchorPane maxHeight="40.0" minHeight="20.0" minWidth="0.0" prefHeight="30.0" prefWidth="592.0" SplitPane.resizableWithParent="false">
 		        <children>
-		            <Button mnemonicParsing="false" text="Nouveau Veicule" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
 		            <Button mnemonicParsing="false" text="Retour" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />           
               	</children>
 			</AnchorPane>
