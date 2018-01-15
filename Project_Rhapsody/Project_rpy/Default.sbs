@@ -3,7 +3,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 	- _id = GUID 87e89bb5-48e9-4737-8e88-8270ed5bb141;
 	- _myState = 8192;
 	- _name = "Default";
-	- _modifiedTimeWeak = 1.15.2018::10:52:53;
+	- _modifiedTimeWeak = 1.15.2018::15:21:26;
 	- _lastID = 55;
 	- Declaratives = { IRPYRawContainer 
 		- size = 5;
@@ -196,7 +196,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 			}
 			- _name = "UC_Utilisateur";
 			- _modifiedTimeWeak = 1.2.1990::0:0:0;
-			- _lastModifiedTime = "1.15.2018::10:53:16";
+			- _lastModifiedTime = "1.15.2018::15:26:17";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID bf04756c-d365-472d-b8da-f58974953e1b;
 				- m_type = 0;
@@ -313,7 +313,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.0489381 0 0 0.124343 47.3869 93.6655 ;
+					- m_transform = 0.0286242 0 0 0.0849385 99.9622 167.595 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -357,7 +357,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.124004 0 0 0.0606909 257.248 122.061 ;
+					- m_transform = 0.0947745 0 0 0.038282 271.19 165.038 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -401,7 +401,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.124004 0 0 0.0606909 256.248 204.061 ;
+					- m_transform = 0.107175 0 0 0.0373482 265.214 234.038 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -781,7 +781,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.0489381 0 0 0.124343 46.3869 323.665 ;
+					- m_transform = 0.0277008 0 0 0.0901925 102.125 316.271 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -825,7 +825,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.124004 0 0 0.0606909 380.248 334.061 ;
+					- m_transform = 0.0983175 0 0 0.0345471 273.197 297.035 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -1037,7 +1037,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.124004 0 0 0.0606909 381.248 419.061 ;
+					- m_transform = 0.10186 0 0 0.0373482 277.204 370.038 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -1081,7 +1081,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.124004 0 0 0.0606909 382.248 510.061 ;
+					- m_transform = 0.0983175 0 0 0.0410831 276.197 433.041 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -1461,7 +1461,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.0489381 0 0 0.124343 52.3869 794.666 ;
+					- m_transform = 0.0277008 0 0 0.0849385 101.125 597.596 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -1505,7 +1505,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.124004 0 0 0.0606909 269.248 885.061 ;
+					- m_transform = 0.0903458 0 0 0.0438842 277.181 640.044 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -1596,8 +1596,8 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 0;
-					- m_SourcePort = -2 543 ;
-					- m_TargetPort = 1014 992 ;
+					- m_SourcePort = -2 409 ;
+					- m_TargetPort = 1006 923 ;
 					- m_pInverseModelObject = { IAssociationEndHandle 
 						- _m2Class = "IAssociationEnd";
 						- _id = GUID e110020a-c84a-47ff-a9e5-efe5e9b59c78;
@@ -1717,7 +1717,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.0489381 0 0 0.124343 44.3869 556.666 ;
+					- m_transform = 0.0295475 0 0 0.0884411 101.8 465.713 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -1761,7 +1761,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.124004 0 0 0.0606909 268.248 636.061 ;
+					- m_transform = 0.0788311 0 0 0.0392157 287.158 523.039 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -2121,7 +2121,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.0590951 0 0 0.10683 947.599 351.079 ;
+					- m_transform = 0.0277008 0 0 0.0674255 634.125 384.009 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -2165,7 +2165,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.102746 0 0 0.0522876 752.206 402.052 ;
+					- m_transform = 0.0832597 0 0 0.0457516 488.167 383.046 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -2209,7 +2209,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.10806 0 0 0.0494865 756.216 501.049 ;
+					- m_transform = 0.0868023 0 0 0.0420168 493.173 459.042 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -2322,7 +2322,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 					- m_bShowQualifier1 = 0;
 					- m_bShowQualifier2 = 0;
 					- m_sourceRole = { CGIText 
-						- m_str = "itsGaragiste";
+						- m_str = "";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -2335,7 +2335,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 2;
 					}
 					- m_targetRole = { CGIText 
-						- m_str = "itsFaire entretien";
+						- m_str = "";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -2490,7 +2490,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 					- m_bShowQualifier1 = 0;
 					- m_bShowQualifier2 = 0;
 					- m_sourceRole = { CGIText 
-						- m_str = "itsGaragiste";
+						- m_str = "";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -2503,7 +2503,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 2;
 					}
 					- m_targetRole = { CGIText 
-						- m_str = "itsFaire maintenance";
+						- m_str = "";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -2737,7 +2737,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.0461681 0 0 0.0989492 956.874 195.065 ;
+					- m_transform = 0.0295476 0 0 0.0814361 632.799 243.478 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -2781,7 +2781,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.108946 0 0 0.0532213 752.218 291.053 ;
+					- m_transform = 0.0708592 0 0 0.0457516 481.142 294.046 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -2894,7 +2894,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 					- m_bShowQualifier1 = 0;
 					- m_bShowQualifier2 = 0;
 					- m_sourceRole = { CGIText 
-						- m_str = "itsChauffeur";
+						- m_str = "";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -2907,7 +2907,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 2;
 					}
 					- m_targetRole = { CGIText 
-						- m_str = "itsLivrer voiture";
+						- m_str = "";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -8670,7 +8670,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 					- m_bShowQualifier1 = 1;
 					- m_bShowQualifier2 = 1;
 					- m_sourceRole = { CGIText 
-						- m_str = "itsDC_Borne";
+						- m_str = "";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -8683,7 +8683,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 0;
 					}
 					- m_targetRole = { CGIText 
-						- m_str = "itsDC_Camera";
+						- m_str = "";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -8841,7 +8841,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 					- m_bShowQualifier1 = 1;
 					- m_bShowQualifier2 = 1;
 					- m_sourceRole = { CGIText 
-						- m_str = "itsDC_Camera";
+						- m_str = "";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -8855,7 +8855,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- m_nOrientationCtrlPt = 0;
 					}
 					- m_targetRole = { CGIText 
-						- m_str = "itsAcces";
+						- m_str = "";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -12902,7 +12902,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 			}
 		}
 	}
-	- weakCGTime = 1.15.2018::10:52:53;
+	- weakCGTime = 1.15.2018::15:21:26;
 	- strongCGTime = 1.10.2018::9:7:14;
 	- _defaultComposite = GUID 73104e7b-275f-419f-b25d-8b8e25156fb3;
 	- _eventsBaseID = -1;
@@ -12913,9 +12913,9 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 			- _id = GUID 73104e7b-275f-419f-b25d-8b8e25156fb3;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- _modifiedTimeWeak = 1.11.2018::10:5:3;
+			- _modifiedTimeWeak = 1.15.2018::10:52:53;
 			- _lastID = 3;
-			- weakCGTime = 1.11.2018::10:5:3;
+			- weakCGTime = 1.15.2018::10:52:53;
 			- strongCGTime = 1.10.2018::9:7:14;
 			- _multiplicity = "";
 			- StateCharts = { IRPYRawContainer 
@@ -17404,9 +17404,6 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 						- _m2Class = "IAssociationEnd";
 						- _id = GUID 612730df-6145-4d57-9950-93573f08acc9;
 					}
-					- Qualifiers = { IRPYRawContainer 
-						- size = 0;
-					}
 					- _linkName = "";
 					- _linkType = Assoc;
 					- _navigability = Navigable;
@@ -17814,9 +17811,6 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 					- _inverse = { IHandle 
 						- _m2Class = "IAssociationEnd";
 						- _id = GUID 91ff10df-ce26-48ad-9f1b-c7bc2a5a9a85;
-					}
-					- Qualifiers = { IRPYRawContainer 
-						- size = 0;
 					}
 					- _linkName = "";
 					- _linkType = Assoc;
@@ -19158,7 +19152,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 					}
 				}
 			}
-			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _modifiedTimeWeak = 1.15.2018::10:52:25;
 			- _lastID = 1;
 			- weakCGTime = 1.15.2018::10:52:25;
 			- strongCGTime = 1.2.1990::0:0:0;
@@ -19189,9 +19183,6 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 				}
 			}
 			- _classModifier = Unspecified;
-			- UseCaseStereoTypes = { IRPYRawContainer 
-				- size = 0;
-			}
 			- _EntryPoints = { IRPYRawContainer 
 				- size = 0;
 			}
@@ -19226,7 +19217,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 					}
 				}
 			}
-			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _modifiedTimeWeak = 1.15.2018::10:52:28;
 			- _lastID = 1;
 			- weakCGTime = 1.15.2018::10:52:28;
 			- strongCGTime = 1.2.1990::0:0:0;
@@ -19257,9 +19248,6 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 				}
 			}
 			- _classModifier = Unspecified;
-			- UseCaseStereoTypes = { IRPYRawContainer 
-				- size = 0;
-			}
 			- _EntryPoints = { IRPYRawContainer 
 				- size = 0;
 			}
@@ -19294,7 +19282,7 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 					}
 				}
 			}
-			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _modifiedTimeWeak = 1.15.2018::10:53:16;
 			- _lastID = 1;
 			- weakCGTime = 1.15.2018::10:53:16;
 			- strongCGTime = 1.2.1990::0:0:0;
@@ -19325,9 +19313,6 @@ I-Logix-RPY-Archive version 8.12.0 Java 9728113
 				}
 			}
 			- _classModifier = Unspecified;
-			- UseCaseStereoTypes = { IRPYRawContainer 
-				- size = 0;
-			}
 			- _EntryPoints = { IRPYRawContainer 
 				- size = 0;
 			}
