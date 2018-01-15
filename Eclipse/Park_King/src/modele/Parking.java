@@ -40,6 +40,7 @@ public class Parking {
     protected int nbDeuxRouesMax;
     
     protected int nbPoidsLourdsMax;
+    
    
     /*
     protected DC_Teleporteur itsDC_Teleporteur;		//## link itsDC_Teleporteur 
@@ -71,6 +72,20 @@ public class Parking {
         return listePoidsLourds.size() < this.nbPoidsLourdsMax;
     }
     
+    
+    
+    
+    public int assignerPlaceVoitureDispo() {
+    	return listeVoitures.size() + 1;    	
+    }
+    
+    public int assignerPlaceDeuxRouesDispo() {
+    	return nbVoituresMax + listeDeuxRoues.size() + 1;
+    }
+    
+    public int assignerPlacePoidsLourdsDispo() {
+    	return nbVoituresMax + nbDeuxRouesMax + listePoidsLourds.size() + 1;
+    }
 }
 /*********************************************************************
 	File Path	: DefaultComponent/DefaultConfig/Default/DC_Parking.java

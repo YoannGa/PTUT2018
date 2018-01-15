@@ -81,15 +81,25 @@ public class Teleporteur {
     	    	}
     		}
     		
-    	}
-    	
-    	
+    	}    	
     	return p;
     }
+    
+    
+    
+    
+    
     public int assignerNewEmplacement(Vehicule v, Parking p) {
+    	int emplacement = 0;
     	
+    	if(v.getType().equals("Voiture")&&p.placeVoitureDispo()) {  		
+    		emplacement = p.assignerPlaceVoitureDispo();
+    	}else if(v.getType().equals("DeuxRoues")&&p.placeDeuxRouesDispo()) {  		
+    			emplacement = p.assignerPlaceDeuxRouesDispo();
+    		}else if(v.getType().equals("PoidsLourds")&&p.placePoidsLourdsDispo()) {  		
+    				emplacement = p.assignerPlacePoidsLourdsDispo();        		}    	
     	
-    	return p.;
+    	return emplacement;
     }
     
 }

@@ -20,6 +20,7 @@ package modele;
 
 //## class DC_Ticket 
 public class Ticket {
+	
 	protected Vehicule v;
     
     protected Parking p;		//## attribute p 
