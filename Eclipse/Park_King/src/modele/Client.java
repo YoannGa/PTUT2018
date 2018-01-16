@@ -82,12 +82,16 @@ public class Client {
         //#]
     }
 
-	public StringProperty getName() {
-		return name;
+	public String getName() {
+		return name.get();
 	}
+	
+    public StringProperty firstNameProperty() {
+        return name;
+    }
 
-	public void setName(StringProperty name) {
-		this.name = name;
+	public void setName(String name) {
+		this.name.set(name);
 	}
 
 	public ArrayList<Ticket> getListeTickets() {
