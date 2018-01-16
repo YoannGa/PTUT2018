@@ -50,14 +50,53 @@ public class Parking {
     protected DC_Vehicule itsDC_Vehicule;		//## link itsDC_Vehicule 
     */
     
+    
+    
+    public Parking(int nbEmplacementVoitures, int nbEmplacementDeuxRoues, int nbEmplacementPoidsLourds) {
+    	this.listeVoitures = new HashMap<>();
+    	this.listeDeuxRoues = new HashMap<>();
+    	this.listePoidsLourds = new HashMap<>();    	
+    	
+    	this.nbVoituresMax = nbEmplacementVoitures;
+    	this.nbDeuxRouesMax = nbEmplacementDeuxRoues;
+    	this.nbPoidsLourdsMax = nbEmplacementPoidsLourds;
+    	
+    	for(int i = 1 ; i <= nbVoituresMax; i++ ) {
+    		emplacementsVoitures.add(i);
+    	}
+    	for(int i = nbVoituresMax+1 ; i <= nbVoituresMax+nbDeuxRouesMax; i++ ) {
+    		emplacementsDeuxRoues.add(i);
+    	}
+    	for(int i = nbVoituresMax+nbDeuxRouesMax+1 ; i <= nbVoituresMax+nbDeuxRouesMax+nbEmplacementPoidsLourds; i++ ) {
+    		emplacementsDeuxRoues.add(i);
+    	}
+    }
+    
     /**
      * @param v
     */
     //## operation ajouterVehicule(Vehicule) 
-    public void ajouterVehicule(Vehicule v) {
-        //#[ operation ajouterVehicule(Vehicule) 
-        //#]
+    
+    public void ajouterVehicule(int e, Vehicule v) {    	
+    	if(v.getType().equals("Voiture")) {  		
+    		listeVoitures.put(e, v);
+    	}else if(v.getType().equals("DeuxRoues")) {  		
+    			listeDeuxRoues.put(e, v);
+    		}else if(v.getType().equals("PoidsLourds")) {  		
+    				listePoidsLourds.put(e, v);
+        		} 
     }
+    
+    public void retirerVehicule(int e, Vehicule v) {    	
+    	if(v.getType().equals("Voiture")) {  		
+    		listeVoitures.remove(e);
+    	}else if(v.getType().equals("DeuxRoues")) {  		
+    			listeDeuxRoues.remove(e);
+    		}else if(v.getType().equals("PoidsLourds")) {  		
+    				listePoidsLourds.remove(e);
+        		} 
+    }
+    
     
     //## operation estPlein() 
     public boolean placeVoitureDispo() {
@@ -85,6 +124,17 @@ public class Parking {
     
     public int assignerPlacePoidsLourdsDispo() {
     	return nbVoituresMax + nbDeuxRouesMax + listePoidsLourds.size() + 1;
+    }
+    
+    public boolean vehiculePresent(Vehicule v) {
+    	if(v.getType().equals("Voiture")) {  		
+    		return this.listeVoitures.containsValue(v);
+    	}else if(v.getType().equals("DeuxRoues")) {  		
+    			return this.listeDeuxRoues.containsValue(v);
+    		}else if(v.getType().equals("PoidsLourds")) {  		
+    				return this.listePoidsLourds.containsValue(v);
+        		} 
+    	return false;
     }
 }
 /*********************************************************************

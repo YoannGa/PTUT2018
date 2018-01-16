@@ -55,16 +55,17 @@ public class Borne {
      * @param c
     */
     //## operation nouveauTicket(Client) 
-    public void nouveauTicket(Client c, Vehicule v) {
-    	
+    public void nouveauTicket(Vehicule v) {    	
     	Parking p = this.tp.assignerParking(v);
-    	Ticket t = new Ticket( , );   	
+    	int emplacement = this.tp.assignerNewEmplacement(v, p);
+    	Ticket t = new Ticket( v, p, emplacement);   	
+    	
     }
+    
     
     //## operation rendreTicket() 
     public void rendreTicket() {
-        //#[ operation rendreTicket() 
-        //#]
+       System.out.println("Opération invalide. Reprenez le ticket.");
     }
     
     /**
@@ -77,9 +78,7 @@ public class Borne {
     */
     //## operation verifValiditeTicket(Ticket) 
     public boolean verifValiditeTicket(Ticket t) {
-		return false;
-        //#[ operation verifValiditeTicket(Ticket) 
-        //#]
+    	return t.getP().vehiculePresent(t.getV());
     }
     
 }

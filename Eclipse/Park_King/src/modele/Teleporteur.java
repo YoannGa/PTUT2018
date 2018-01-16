@@ -41,8 +41,16 @@ public class Teleporteur {
     */
     //## operation garerVehicule(Vehicule,int) 
     public void garerVehicule(Ticket t) {
-        //#[ operation garerVehicule(Vehicule,int) 
-        //#]
+        if(t.getP().equals(parking)) {
+        	parking.ajouterVehicule(t.getNumEmplacement(), t.getV());
+        }else {
+        	for(Parking p2 : parkingTiers) {
+        		if(t.getP().equals(p2)) {
+                	p2.ajouterVehicule(t.getNumEmplacement(), t.getV());
+                }
+        	}
+        }
+        
     }
     
     /**
@@ -50,8 +58,15 @@ public class Teleporteur {
     */
     //## operation retirerVehicule(Ticket) 
     public void retirerVehicule(Ticket t) {
-        //#[ operation retirerVehicule(Ticket) 
-        //#]
+    	if(t.getP().equals(parking)) {
+        	parking.retirerVehicule(t.getNumEmplacement(), t.getV());
+        }else {
+        	for(Parking p2 : parkingTiers) {
+        		if(t.getP().equals(p2)) {
+                	p2.retirerVehicule(t.getNumEmplacement(), t.getV());
+                }
+        	}
+        }
     }
     
     //## operation verifPlaceDispo() 
