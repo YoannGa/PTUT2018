@@ -57,7 +57,7 @@ public class UserViewMain extends Application {
         try {
             // Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(UserViewMain.class.getResource("vue/UserView.fxml"));
+            loader.setLocation(UserViewMain.class.getResource("vue/rootMenu.fxml"));
             rootLayout = (BorderPane) loader.load();
 
             // Show the scene containing the root layout.
