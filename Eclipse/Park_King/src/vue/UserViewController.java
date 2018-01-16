@@ -13,18 +13,7 @@ public class UserViewController {
 	    @FXML
 	    private TableColumn<Client, String> firstNameColumn;
 	    @FXML
-	    private TableColumn<Client, String> lastNameColumn;
-
-	    @FXML
 	    private Label firstNameLabel;
-	    @FXML
-	    private Label streetLabel;
-	    @FXML
-	    private Label postalCodeLabel;
-	    @FXML
-	    private Label cityLabel;
-	    @FXML
-	    private Label birthdayLabel;
 
 	    // Reference to the main application.
 	    private UserViewMain mainApp;
@@ -43,7 +32,7 @@ public class UserViewController {
 	    @FXML
 	    private void initialize() {
 	        // Initialize the person table with the two columns.
-	        firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().getName());
+	        firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
 	    }
 
 	    /**

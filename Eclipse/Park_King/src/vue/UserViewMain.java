@@ -43,11 +43,11 @@ public class UserViewMain extends Application {
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("AddressApp");
+        this.primaryStage.setTitle("Park-King");
 
-        //initRootLayout();
+        initRootLayout();
 
-        //showPersonOverview();
+        showPersonOverview();
     }
 
     /**
@@ -76,12 +76,12 @@ public class UserViewMain extends Application {
         try {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(UserViewMain.class.getResource("view/PersonOverview.fxml"));
+            loader.setLocation(UserViewMain.class.getResource("UserView.fxml"));
             AnchorPane personOverview = (AnchorPane) loader.load();
 
             // Set person overview into the center of root layout.
             rootLayout.setCenter(personOverview);
-
+            
             // Give the controller access to the main app.
             UserViewController controller = loader.getController();
             controller.setMainApp(this);
