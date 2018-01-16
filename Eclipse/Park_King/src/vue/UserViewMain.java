@@ -45,9 +45,9 @@ public class UserViewMain extends Application {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("AddressApp");
 
-        initRootLayout();
+        //initRootLayout();
 
-        showPersonOverview();
+        //showPersonOverview();
     }
 
     /**
@@ -57,7 +57,7 @@ public class UserViewMain extends Application {
         try {
             // Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(UserViewMain.class.getResource("vue/rootMenu.fxml"));
+            loader.setLocation(UserViewMain.class.getResource("RootMenu.fxml"));
             rootLayout = (BorderPane) loader.load();
 
             // Show the scene containing the root layout.
@@ -76,11 +76,16 @@ public class UserViewMain extends Application {
         try {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(UserViewMain.class.getResource("vue/UserView.fxml"));
+            loader.setLocation(UserViewMain.class.getResource("view/PersonOverview.fxml"));
             AnchorPane personOverview = (AnchorPane) loader.load();
 
             // Set person overview into the center of root layout.
             rootLayout.setCenter(personOverview);
+
+            // Give the controller access to the main app.
+            UserViewController controller = loader.getController();
+            controller.setMainApp(this);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
