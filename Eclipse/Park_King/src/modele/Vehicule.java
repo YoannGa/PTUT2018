@@ -21,13 +21,9 @@ package modele;
 //## class DC_Vehicule 
 public class Vehicule {
     
-    protected int longueur;		//## attribute longueur 
+   
     
-    protected int largeur;		//## attribute largeur 
-    
-    protected int hauteur;		//## attribute hauteur 
-    
-    TypeVehicule type;
+    protected TypeVehicule type;
     
     protected String imatriculation;		//## attribute imatriculation 
     
@@ -35,11 +31,17 @@ public class Vehicule {
     
    // protected DC_Parking itsDC_Parking;		//## link itsDC_Parking 
     
+    public Vehicule(String t) {    	
+    	this.type = t;    	
+    };
+    
+    
     
     //## operation getVolume() 
-    public float getVolume() {
-    	return longueur * largeur * hauteur ;
-    }
+ 
+
+	
+
 
 	public TypeVehicule getType() {
 		return type;
@@ -49,29 +51,7 @@ public class Vehicule {
 		this.type = type;
 	}
 
-	public int getLongueur() {
-		return longueur;
-	}
-
-	public void setLongueur(int longueur) {
-		this.longueur = longueur;
-	}
-
-	public int getLargeur() {
-		return largeur;
-	}
-
-	public void setLargeur(int largeur) {
-		this.largeur = largeur;
-	}
-
-	public int getHauteur() {
-		return hauteur;
-	}
-
-	public void setHauteur(int hauteur) {
-		this.hauteur = hauteur;
-	}
+	
 
 	public String getImatriculation() {
 		return imatriculation;

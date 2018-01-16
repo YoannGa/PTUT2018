@@ -37,10 +37,10 @@ public class Client {
     
     public Client(String n){
     	this.name = new SimpleStringProperty(n);
-    	this.listeTickets = new ArrayList<>();
-    	
-    	
+    	this.listeTickets = new ArrayList<>();    	
     }
+    
+    
     
     public Client(String n, Vehicule v, Ticket t){
     	this.name = new SimpleStringProperty(n);

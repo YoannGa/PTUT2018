@@ -21,13 +21,19 @@ package modele;
 //## class DC_Camera 
 public class Camera {
     
-    protected Borne itsDC_Borne;		//## link itsDC_Borne 
+    protected Vehicule v;		//## link itsDC_Borne 
     
     
     //## operation scanVehicule() 
-    public void scanVehicule() {
-        //#[ operation scanVehicule() 
-        //#]
+    public int scanVehicule() {
+    	return (int) (Math.random() * 100);
+    }
+    
+    
+
+    public boolean vehiculePresent() {
+    	
+    	return false; 
     }
     
 }
