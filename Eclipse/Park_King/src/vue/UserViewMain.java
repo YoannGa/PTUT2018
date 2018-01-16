@@ -46,7 +46,6 @@ public class UserViewMain extends Application {
         this.primaryStage.setTitle("Park-King");
 
         initRootLayout();
-
         showPersonOverview();
     }
 

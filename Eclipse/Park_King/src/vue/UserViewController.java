@@ -32,7 +32,43 @@ public class UserViewController {
 	    @FXML
 	    private void initialize() {
 	        // Initialize the person table with the two columns.
-	        firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
+	        firstNameColumn.setCellValueFactory(
+	                cellData -> cellData.getValue().firstNameProperty());
+
+	        // Clear person details.
+	        showPersonDetails(null);
+
+	        // Listen for selection changes and show the person details when changed.
+	        personTable.getSelectionModel().selectedItemProperty().addListener(
+	                (observable, oldValue, newValue) -> showPersonDetails(newValue));
+	    }
+	    
+	    /**
+	     * Fills all text fields to show details about the person.
+	     * If the specified person is null, all text fields are cleared.
+	     *
+	     * @param person the person or null
+	     */
+	    private void showPersonDetails(Client person) {
+	        if (person != null) {
+	            // Fill the labels with info from the person object.
+	            firstNameLabel.setText(person.getName());
+
+	            // TODO: We need a way to convert the birthday into a String!
+	            // birthdayLabel.setText(...);
+	        } else {
+	            // Person is null, remove all the text.
+	            firstNameLabel.setText("");
+	        }
+	    }
+	    
+	    /**
+	     * Called when the user clicks on the delete button.
+	     */
+	    @FXML
+	    private void handleDeletePerson() {
+	        int selectedIndex = personTable.getSelectionModel().getSelectedIndex();
+	        personTable.getItems().remove(selectedIndex);
 	    }
 
 	    /**

@@ -19,7 +19,7 @@
                <children>
                   <TableView fx:id="personTable" prefHeight="398.0" prefWidth="295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn fx:id="userCol" prefWidth="294.0" text="Client" />
+                      <TableColumn fx:id="firstNameColumn" prefWidth="294.0" text="Client" />
                     </columns>
                   </TableView>
                   <Button mnemonicParsing="false" text="Nouveau Client" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
