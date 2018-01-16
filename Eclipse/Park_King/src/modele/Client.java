@@ -13,6 +13,9 @@ package modele;
 //## auto_generated
 import java.util.*;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 //----------------------------------------------------------------------------
 // Default/DC_Client.java                                                                  
 //----------------------------------------------------------------------------
@@ -23,7 +26,7 @@ import java.util.*;
 //## class DC_Client 
 public class Client {
     
-    protected String name;		//## attribute name 
+    protected StringProperty name;		//## attribute name 
     
     protected ArrayList<Ticket> listeTickets;		//## attribute tickets 
     
@@ -33,14 +36,14 @@ public class Client {
     
     
     public Client(String n){
-    	this.name = n;
+    	this.name = new SimpleStringProperty(n);
     	this.listeTickets = new ArrayList<>();
     	
     	
     }
     
     public Client(String n, Vehicule v, Ticket t){
-    	this.name = n;
+    	this.name = new SimpleStringProperty(n);
     	this.listeTickets = new ArrayList<>();
     	this.listeVehicule = new ArrayList<>();
     	this.listeTickets.add(t);
@@ -79,11 +82,11 @@ public class Client {
         //#]
     }
 
-	public String getName() {
+	public StringProperty getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(StringProperty name) {
 		this.name = name;
 	}
 
