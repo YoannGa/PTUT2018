@@ -100,6 +100,21 @@ public class ParkingTest {
 		assertFalse("Camion Vide",monP.placePoidsLourdsDispo());
 	}
 	
+	//TODO test caca a metre dans le tp
+	@Test
+	public void ajoutSansPlace() {
+		monP =creerParkingVide();
+		assertFalse("Voiture Vide",monP.placeVoitureDispo());
+		Vehicule v1 = new Vehicule(TypeVehicule.Voiture);
+		Vehicule m1 = new Vehicule(TypeVehicule.DeuxRoues);
+		Vehicule c1 = new Vehicule(TypeVehicule.PoidsLourd);
+		monP.ajouterVehicule(1, c1);
+		monP.ajouterVehicule(1, v1);
+		monP.ajouterVehicule(1, m1);
+		assertFalse("N'est pas dedans",monP.vehiculePresent(v1));
+		assertFalse("N'est pas dedans",monP.vehiculePresent(m1));
+		assertFalse("N'est pas dedans",monP.vehiculePresent(c1));
+	}
 
 
 }
