@@ -40,7 +40,6 @@ public class UserEditDialogController {
      */
     public void setPerson(Client person) {
         this.person = person;
-
         firstNameField.setText(person.getName());
     }
     
@@ -83,7 +82,7 @@ public class UserEditDialogController {
         String errorMessage = "";
 
         if (firstNameField.getText() == null || firstNameField.getText().length() == 0) {
-            errorMessage += "No valid first name!\n";
+            errorMessage += "Nom invalide !\n";
         }
         
         if (errorMessage.length() == 0) {
@@ -92,8 +91,8 @@ public class UserEditDialogController {
             // Show the error message.
             Alert alert = new Alert(AlertType.ERROR);
             alert.initOwner(dialogStage);
-            alert.setTitle("Invalid Fields");
-            alert.setHeaderText("Please correct invalid fields");
+            alert.setTitle("Champs invalides");
+            alert.setHeaderText("Veuillez corriger les champs invalides.");
             alert.setContentText(errorMessage);
 
             alert.showAndWait();

@@ -22,7 +22,7 @@
                       <TableColumn fx:id="firstNameColumn" prefWidth="294.0" text="Client" />
                     </columns>
                   </TableView>
-                  <Button mnemonicParsing="false" text="Nouveau Client" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <Button mnemonicParsing="false" onAction="#handleNewPerson" text="Nouveau Client" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
@@ -52,6 +52,8 @@
                                     <Label fx:id="firstNameLabel" layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="175.0" text="label" GridPane.columnIndex="1" />
                                  </children>
                               </GridPane>
+                              <Button layoutX="158.0" layoutY="263.0" mnemonicParsing="false" onAction="#handleEditPerson" text="Éditer" />
+                              <Button layoutX="212.0" layoutY="263.0" mnemonicParsing="false" onAction="#handleDeletePerson" text="Supprimer" />
                            </children>
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">

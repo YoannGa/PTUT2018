@@ -4,12 +4,13 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vue.UserViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vue.UserEditDialogController">
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -31,15 +32,16 @@
                            <children>
                               <Label prefHeight="48.0" prefWidth="175.0" text="Nom :" />
                               <Label text="Type :" GridPane.rowIndex="2" />
-                              <Label fx:id="firstNameLabel" layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="175.0" text="label" GridPane.columnIndex="1" />
-                              <RadioButton mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="RadioButton" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="131.0" text="RadioButton" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="137.0" text="RadioButton" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <RadioButton mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="Sans abonnement" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="131.0" text="Abonné" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="137.0" text="Super abonné" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="firstNameField" prefHeight="25.0" prefWidth="100.0" GridPane.columnIndex="1" />
                            </children>
                         </GridPane>
                         <Button layoutX="50.0" layoutY="227.0" mnemonicParsing="false" text="Ajouter Voiture" />
                         <Button layoutX="50.0" layoutY="264.0" mnemonicParsing="false" text="Ajouter ticket" />
-                        <Button layoutX="50.0" layoutY="319.0" mnemonicParsing="false" text="Valider" />
+                        <Button layoutX="433.0" layoutY="332.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="25.0" prefWidth="60.0" text="Valider" />
+                        <Button layoutX="509.0" layoutY="332.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="60.0" text="Annuler" />
                      </children>
                   </AnchorPane>
                </items>
