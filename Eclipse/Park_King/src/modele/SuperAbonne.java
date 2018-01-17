@@ -10,6 +10,7 @@
 
 package modele;
 
+import java.util.ArrayList;
 
 //----------------------------------------------------------------------------
 // Default/DC_SuperAbonne.java                                                                  
@@ -30,6 +31,11 @@ public class SuperAbonne extends Abonne {
     public SuperAbonne() {
     	super();
     }
+    
+    public SuperAbonne(String n, ArrayList<Vehicule> v, ArrayList<Ticket> t){
+    	super(n,v,t);    	
+    }
+    
 	//## operation gererPackVIP() 
     public void gererPackVIP() {
         

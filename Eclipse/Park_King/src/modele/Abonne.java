@@ -10,6 +10,9 @@
 
 package modele;
 
+import java.util.ArrayList;
+
+import javafx.beans.property.SimpleStringProperty;
 
 //----------------------------------------------------------------------------
 // Default/DC_Abonne.java                                                                  
@@ -30,6 +33,12 @@ public class Abonne extends Client {
 		numAbonne = num;
 		// TODO Auto-generated constructor stub
 	}
+    
+    public Abonne(String n, ArrayList<Vehicule> v, ArrayList<Ticket> t){
+    	super(n,v,t);
+    	this.numAbonne = (int) (Math.random()*100);
+    }
+    
     
     
     public Abonne() {

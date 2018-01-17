@@ -54,6 +54,15 @@ public class Client {
     	this.listeVehicule.add(v);
     }
     
+    public Client(String n, ArrayList<Vehicule> v, ArrayList<Ticket> t){
+    	this.name = new SimpleStringProperty(n);
+    	this.listeTickets = t;
+    	this.listeVehicule = v;
+    }
+    
+    
+    
+    
     
     /**
      * @param b
