@@ -34,8 +34,8 @@ public class Parking {
     protected HashSet<Integer> emplacementsDeuxRoues;		//## attribute emplacementsDeuxRoues 
     
     protected HashSet<Integer> emplacementsLourds;		//## attribute emplacementsLourds 
-    
-    protected int nbVoituresMax;
+ 
+	protected int nbVoituresMax;
     
     protected int nbDeuxRouesMax;
     
@@ -161,7 +161,35 @@ public class Parking {
         		} 
     	return false;
     }
+    
+    
+    
+    public int getNbVoituresMax() {
+		return nbVoituresMax;
+	}
+
+	public void setNbVoituresMax(int nbVoituresMax) {
+		this.nbVoituresMax = nbVoituresMax;
+	}
+
+	public int getNbDeuxRouesMax() {
+		return nbDeuxRouesMax;
+	}
+
+	public void setNbDeuxRouesMax(int nbDeuxRouesMax) {
+		this.nbDeuxRouesMax = nbDeuxRouesMax;
+	}
+
+	public int getNbPoidsLourdsMax() {
+		return nbPoidsLourdsMax;
+	}
+
+	public void setNbPoidsLourdsMax(int nbPoidsLourdsMax) {
+		this.nbPoidsLourdsMax = nbPoidsLourdsMax;
+	}
+
 }
+
 /*********************************************************************
 	File Path	: DefaultComponent/DefaultConfig/Default/DC_Parking.java
 *********************************************************************/
