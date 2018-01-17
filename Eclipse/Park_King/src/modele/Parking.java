@@ -160,6 +160,16 @@ public class Parking {
         		} 
     	return false;
     }
+
+	public int getVMax() {
+		return nbVoituresMax;
+	}
+	public int getMMax() {
+		return nbDeuxRouesMax;
+	}
+	public int getCMax() {
+		return nbPoidsLourdsMax;
+	}
 }
 /*********************************************************************
 	File Path	: DefaultComponent/DefaultConfig/Default/DC_Parking.java
