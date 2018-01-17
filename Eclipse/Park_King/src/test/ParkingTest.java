@@ -40,13 +40,13 @@ public class ParkingTest {
 		Vehicule v1 = new Vehicule(TypeVehicule.Voiture);
 		Vehicule m1 = new Vehicule(TypeVehicule.DeuxRoues);
 		Vehicule c1 = new Vehicule(TypeVehicule.PoidsLourd);
-		for(int i=1; i<=monP.getCMax();i++) {
+		for(int i=1; i<=monP.getNbPoidsLourdsMax();i++) {
 			monP.ajouterVehicule(i, c1);
 		}
-		for(int i=1; i<=monP.getVMax();i++) {
+		for(int i=1; i<=monP.getNbVoituresMax();i++) {
 			monP.ajouterVehicule(i, v1);
 		}
-		for(int i=1; i<=monP.getMMax();i++) {
+		for(int i=1; i<=monP.getNbDeuxRouesMax();i++) {
 			monP.ajouterVehicule(i, m1);
 		}
 		assertFalse("Voiture Vide",monP.placeVoitureDispo());
@@ -63,13 +63,13 @@ public class ParkingTest {
 		Vehicule v1 = new Vehicule(TypeVehicule.Voiture);
 		Vehicule m1 = new Vehicule(TypeVehicule.DeuxRoues);
 		Vehicule c1 = new Vehicule(TypeVehicule.PoidsLourd);
-		for(int i=1; i<=monP.getCMax();i++) {
+		for(int i=1; i<=monP.getNbPoidsLourdsMax();i++) {
 			monP.ajouterVehicule(i, c1);
 		}
-		for(int i=1; i<=monP.getVMax();i++) {
+		for(int i=1; i<=monP.getNbVoituresMax();i++) {
 			monP.ajouterVehicule(i, v1);
 		}
-		for(int i=1; i<=monP.getMMax();i++) {
+		for(int i=1; i<=monP.getNbDeuxRouesMax();i++) {
 			monP.ajouterVehicule(i, m1);
 		}
 		assertFalse("Voiture Vide",monP.placeVoitureDispo());
@@ -86,13 +86,13 @@ public class ParkingTest {
 		Vehicule v1 = new Vehicule(TypeVehicule.Voiture);
 		Vehicule m1 = new Vehicule(TypeVehicule.DeuxRoues);
 		Vehicule c1 = new Vehicule(TypeVehicule.PoidsLourd);
-		for(int i=1; i<=monP.getCMax();i++) {
+		for(int i=1; i<=monP.getNbPoidsLourdsMax();i++) {
 			monP.ajouterVehicule(i, c1);
 		}
-		for(int i=1; i<=monP.getVMax();i++) {
+		for(int i=1; i<=monP.getNbVoituresMax();i++) {
 			monP.ajouterVehicule(i, v1);
 		}
-		for(int i=1; i<=monP.getMMax();i++) {
+		for(int i=1; i<=monP.getNbDeuxRouesMax();i++) {
 			monP.ajouterVehicule(i, m1);
 		}
 		assertFalse("Voiture Vide",monP.placeVoitureDispo());

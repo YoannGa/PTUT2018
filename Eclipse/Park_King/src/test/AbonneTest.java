@@ -7,7 +7,9 @@ import org.junit.Test;
 import modele.Abonne;
 
 public class AbonneTest {
-
+	
+	Abonne p1;
+	
 	protected Abonne creerAbonne(String nom) {
 		return new Abonne(nom);
 		
@@ -15,7 +17,7 @@ public class AbonneTest {
 	
 	@Test
 	public void testAbonne() {
-		Abonne p1 = creerAbonne("Bob");
+		 p1 = creerAbonne("Bob");
 	}
 
 	@Test

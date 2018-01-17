@@ -37,19 +37,10 @@ public class ClientTest {
 		assertEquals(nbTicket+1,monC.getListeTickets().size());
 	}
 
-	@Test
-	public void testInsererTicket() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testPayer() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	public void testRecupVehicule() {
-		fail("Not yet implemented");
+		
 	}
 
 }
