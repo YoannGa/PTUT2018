@@ -3,14 +3,23 @@ package vue;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import modele.Abonne;
 import modele.Client;
+import modele.SuperAbonne;
 
 public class UserEditDialogController {
 
 	@FXML
     private TextField nameField;
+	@FXML
+    private RadioButton clientBtn;
+	@FXML
+    private RadioButton abonneBtn;
+	@FXML
+    private RadioButton superAboBtn;
 	
 	private Stage dialogStage;
     private Client client;
@@ -41,6 +50,16 @@ public class UserEditDialogController {
     public void setClient(Client client) {
         this.client = client;
         nameField.setText(client.getName());
+        
+        if(client instanceof SuperAbonne) { 
+        	superAboBtn.setSelected(true);
+        } else {
+        	if(client instanceof Abonne) {
+            	abonneBtn.setSelected(true);
+            } else {
+            	clientBtn.setSelected(true);
+            }
+        }
     }
     
     /**

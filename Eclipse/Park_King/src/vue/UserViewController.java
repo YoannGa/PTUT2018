@@ -118,6 +118,18 @@ public class UserViewController {
 	        Client tempClient = new Client();
 	        boolean okClicked = mainApp.showClientEditDialog(tempClient);
 	        if (okClicked) {
+	        	
+	        	/* IL FAUT CREER SELON LE TYPE COCHÉ dans edit.
+	            if(isType == "Super Abonné") { 
+	            	
+	            } else {
+	            	if(isType == "Abonné") { 
+
+		            } else {
+			            mainApp.getClientData().add(tempClient);
+		            }
+	            }
+	            */
 	            mainApp.getClientData().add(tempClient);
 	        }
 	    }
@@ -132,6 +144,7 @@ public class UserViewController {
 	        if (selectedClient != null) {
 	            boolean okClicked = mainApp.showClientEditDialog(selectedClient);
 	            if (okClicked) {
+	            	 showClientDetails(selectedClient);
 	            }
 
 	        } else {

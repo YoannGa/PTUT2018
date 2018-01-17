@@ -34,7 +34,6 @@ public class UserViewMain extends Application {
         clientData.add(new Client("Yoann"));
         
         clientData.add(new Abonne("Anna"));
-        clientData.add(new Abonne("Lino"));
         
         clientData.add(new SuperAbonne("Stefan"));
         clientData.add(new SuperAbonne("Arnaud"));
