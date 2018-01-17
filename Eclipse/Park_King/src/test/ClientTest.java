@@ -6,18 +6,23 @@ import org.junit.Test;
 
 import modele.Borne;
 import modele.Client;
+import modele.TypeVehicule;
+import modele.Vehicule;
 
-public abstract class ClientTest {
+public class ClientTest {
 
 	Client monC;
 	
-	abstract protected Client creerClient();
+	protected Client creerClient() {
+		return new Client();
+	}
+	
 
 	
 	@Test
 	public void testClientString() {
 		monC = creerClient();
-		assertEquals("Robert",monC.getName());
+		assertEquals("bob",monC.getName());
 	}
 
 	@Test
@@ -25,7 +30,9 @@ public abstract class ClientTest {
 		monC = creerClient();
 		int nbTicket = monC.getListeTickets().size();
 		Borne b = new Borne();
-		monC.dermanderTicket(b);
+		Vehicule v1 = new Vehicule(TypeVehicule.Voiture);
+
+		monC.demanderTicket(b, v1);
 		assertEquals(nbTicket+1,monC.getListeTickets().size());
 	}
 
