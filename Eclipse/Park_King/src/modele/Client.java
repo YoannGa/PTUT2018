@@ -40,6 +40,10 @@ public class Client {
     	this.listeTickets = new ArrayList<>();    	
     }
     
+    public Client () {
+    	this.name = new SimpleStringProperty("Bob");
+    	this.listeTickets = new ArrayList<>();
+    }
     
     
     public Client(String n, Vehicule v, Ticket t){
@@ -55,9 +59,9 @@ public class Client {
      * @param b
     */
     //## operation dermanderTicket(Borne) 
-    public void dermanderTicket(Borne b) {
-        //#[ operation dermanderTicket(Borne) 
-        //#]
+    public void demanderTicket(Borne b, Vehicule v) {
+       
+        this.listeTickets.add(b.nouveauTicket(v));
     }
     
     /**
@@ -66,14 +70,14 @@ public class Client {
     */
     //## operation insererTicket(Ticket,Borne) 
     public void insererTicket(Ticket t, Borne b) {
-        //#[ operation insererTicket(Ticket,Borne) 
-        //#]
+        System.out.println("Je suis " + this.getName() + " et j'insere un ticket");
+        
+
     }
     
     //## operation payer() 
     public void payer() {
-        //#[ operation payer() 
-        //#]
+      System.out.println("Je suis " + this.getName() + " et je paye");
     }
     
     //## operation recupVehicule() 

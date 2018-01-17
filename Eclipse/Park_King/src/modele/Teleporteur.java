@@ -57,7 +57,7 @@ public class Teleporteur {
      * @param t
     */
     //## operation retirerVehicule(Ticket) 
-    public void retirerVehicule(Ticket t) {
+    public void retirerVehicule(Ticket t) { 
     	if(t.getP().equals(parking)) {
         	parking.retirerVehicule(t.getNumEmplacement(), t.getV());
         }else {
@@ -70,14 +70,14 @@ public class Teleporteur {
     }
     
     //## operation verifPlaceDispo() 
-    public boolean verifPlaceDispo(Vehicule v, Parking p) {
+    public boolean verifPlaceDispo(Vehicule v, Parking p) { //Renvoie true si il y a une place disponible pour le vehicule v dans le parking p
     	boolean placeDispo = false;
     	
-    	if(v.getType().equals("Voiture")&&p.placeVoitureDispo()) {  		
+    	if(v.getType().equals(TypeVehicule.Voiture)&&p.placeVoitureDispo()) {  		
     		placeDispo = true;
-    	}else if(v.getType().equals("DeuxRoues")&&p.placeDeuxRouesDispo()) {  		
+    	}else if(v.getType().equals(TypeVehicule.DeuxRoues)&&p.placeDeuxRouesDispo()) {  		
     			placeDispo = true;
-    		}else if(v.getType().equals("PoidsLourds")&&p.placePoidsLourdsDispo()) {  		
+    		}else if(v.getType().equals(TypeVehicule.PoidsLourd)&&p.placePoidsLourdsDispo()) {  		
     			placeDispo = true;
         		}    	
 		return placeDispo;
@@ -85,7 +85,7 @@ public class Teleporteur {
     }
     
    
-    public Parking assignerParking(Vehicule v) {
+    public Parking assignerParking(Vehicule v) { // assigne un parking p à un vehicule v
     	Parking p = null;
     	if (this.verifPlaceDispo(v, this.parking)) {
     		p = this.parking;
@@ -94,8 +94,7 @@ public class Teleporteur {
     			if (this.verifPlaceDispo(v, p2)) {
     	    		p = this.parking;
     	    	}
-    		}
-    		
+    		}    		
     	}    	
     	return p;
     }
@@ -104,14 +103,14 @@ public class Teleporteur {
     
     
     
-    public int assignerNewEmplacement(Vehicule v, Parking p) {
-    	int emplacement = 0;
+    public int assignerNewEmplacement(Vehicule v, Parking p) { // assigne un emplacement à un vehicule v dans un parking p, renvoit le numéro de la place (int)
+    	int emplacement = 0;                                   // verification de place disponible dans le parking p necessaire ! 
     	
-    	if(v.getType().equals("Voiture")&&p.placeVoitureDispo()) {  		
+    	if(v.getType().equals(TypeVehicule.Voiture)) {  		
     		emplacement = p.assignerPlaceVoitureDispo();
-    	}else if(v.getType().equals("DeuxRoues")&&p.placeDeuxRouesDispo()) {  		
+    	}else if(v.getType().equals(TypeVehicule.DeuxRoues)) {  		
     			emplacement = p.assignerPlaceDeuxRouesDispo();
-    		}else if(v.getType().equals("PoidsLourds")&&p.placePoidsLourdsDispo()) {  		
+    		}else if(v.getType().equals(TypeVehicule.PoidsLourd)) {  		
     				emplacement = p.assignerPlacePoidsLourdsDispo();        		}    	
     	
     	return emplacement;

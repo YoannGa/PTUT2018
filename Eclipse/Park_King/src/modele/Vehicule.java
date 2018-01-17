@@ -31,10 +31,14 @@ public class Vehicule {
     
    // protected DC_Parking itsDC_Parking;		//## link itsDC_Parking 
     
-    public Vehicule(String t) {    	
+    public Vehicule(TypeVehicule t) {    	
     	this.type = t;    	
     };
     
+    public Vehicule(TypeVehicule t, String ima) {    	
+    	this.type = t;    	
+    	this.imatriculation = ima;
+    };
     
     
     //## operation getVolume() 

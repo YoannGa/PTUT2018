@@ -72,27 +72,31 @@ public class Parking {
     	}
     }
     
+    public Parking() {
+    	new Parking(10,10,10);
+    }
+    
     /**
      * @param v
     */
     //## operation ajouterVehicule(Vehicule) 
     
     public void ajouterVehicule(int e, Vehicule v) {    	
-    	if(v.getType().equals("Voiture")) {  		
+    	if(v.getType().equals(TypeVehicule.Voiture)) {  		
     		listeVoitures.put(e, v);
-    	}else if(v.getType().equals("DeuxRoues")) {  		
+    	}else if(v.getType().equals(TypeVehicule.DeuxRoues)) {  		
     			listeDeuxRoues.put(e, v);
-    		}else if(v.getType().equals("PoidsLourds")) {  		
+    		}else if(v.getType().equals(TypeVehicule.PoidsLourd)) {  		
     				listePoidsLourds.put(e, v);
         		} 
     }
     
     public void retirerVehicule(int e, Vehicule v) {    	
-    	if(v.getType().equals("Voiture")) {  		
+    	if(v.getType().equals(TypeVehicule.Voiture)) {  		
     		listeVoitures.remove(e);
-    	}else if(v.getType().equals("DeuxRoues")) {  		
+    	}else if(v.getType().equals(TypeVehicule.DeuxRoues)) {  		
     			listeDeuxRoues.remove(e);
-    		}else if(v.getType().equals("PoidsLourds")) {  		
+    		}else if(v.getType().equals(TypeVehicule.PoidsLourd)) {  		
     				listePoidsLourds.remove(e);
         		} 
     }
@@ -115,23 +119,39 @@ public class Parking {
     
     
     public int assignerPlaceVoitureDispo() {
-    	return listeVoitures.size() + 1;    	
+    	for(int i = 1; i <= this.nbVoituresMax; i++ ) {
+    		if(this.listeVoitures.containsKey(i)) {
+    			return i;
+    		}
+    	}
+    	return 0;    	
     }
     
-    public int assignerPlaceDeuxRouesDispo() {
-    	return nbVoituresMax + listeDeuxRoues.size() + 1;
+    public int assignerPlaceDeuxRouesDispo() {    	
+    	for(int i = nbVoituresMax + 1; i <= this.nbVoituresMax+ this.nbDeuxRouesMax; i++ ) {
+    		if(this.listeDeuxRoues.containsKey(i)) {
+    			return i;
+    		}
+    	}
+    	return 0;     	
     }
     
     public int assignerPlacePoidsLourdsDispo() {
-    	return nbVoituresMax + nbDeuxRouesMax + listePoidsLourds.size() + 1;
+    	for(int i = nbVoituresMax + nbDeuxRouesMax + 1; i <= this.nbVoituresMax+ this.nbDeuxRouesMax + this.nbPoidsLourdsMax; i++ ) {
+    		if(this.listePoidsLourds.containsKey(i)) {
+    			return i;
+    		}
+    	}
+    	return 0;
+    	
     }
     
     public boolean vehiculePresent(Vehicule v) {
-    	if(v.getType().equals("Voiture")) {  		
+    	if(v.getType().equals(TypeVehicule.Voiture)) {  		
     		return this.listeVoitures.containsValue(v);
-    	}else if(v.getType().equals("DeuxRoues")) {  		
+    	}else if(v.getType().equals(TypeVehicule.DeuxRoues)) {  		
     			return this.listeDeuxRoues.containsValue(v);
-    		}else if(v.getType().equals("PoidsLourds")) {  		
+    		}else if(v.getType().equals(TypeVehicule.PoidsLourd)) {  		
     				return this.listePoidsLourds.containsValue(v);
         		} 
     	return false;

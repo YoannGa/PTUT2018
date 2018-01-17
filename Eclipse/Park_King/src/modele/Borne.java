@@ -21,10 +21,10 @@ package modele;
 //## class DC_Borne 
 public class Borne {
     
-    protected Camera cam;		//## attribute cam 
-    
+
     protected Teleporteur tp;		//## attribute tp 
     
+    protected Acces a;
    
     
     /**
@@ -58,11 +58,11 @@ public class Borne {
      * @param c
     */
     //## operation nouveauTicket(Client) 
-    public void nouveauTicket(Vehicule v) {    	
+    public Ticket nouveauTicket(Vehicule v) {    	
     	Parking p = this.tp.assignerParking(v);
     	int emplacement = this.tp.assignerNewEmplacement(v, p);
-    	Ticket t = new Ticket( v, p, emplacement);   	
-    	
+    	Ticket t = new Ticket( v, p, emplacement);  
+    	return t;    	
     }
     
     
