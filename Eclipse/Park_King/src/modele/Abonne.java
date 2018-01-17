@@ -21,13 +21,20 @@ package modele;
 //## class DC_Abonne 
 public class Abonne extends Client {
     
-    public Abonne(String n) {
+	 public Abonne(String n) {
+			super(n);
+			// TODO Auto-generated constructor stub
+		}
+    public Abonne(String n, int num) {
 		super(n);
+		numAbonne = num;
 		// TODO Auto-generated constructor stub
 	}
     
+    
     public Abonne() {
     	super();
+    	this.numAbonne = (int) (Math.random()*100);
     }
 
 	protected int numAbonne;		//## attribute numAbonne 

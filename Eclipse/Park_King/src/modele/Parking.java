@@ -77,7 +77,7 @@ public class Parking {
     }
     
     public Parking() {
-    	new Parking(10,10,10);
+    	 this(10,10,10);
     }
     
     /**
