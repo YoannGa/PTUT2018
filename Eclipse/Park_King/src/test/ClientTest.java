@@ -4,21 +4,29 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class ClientTest {
+import modele.Borne;
+import modele.Client;
 
+public abstract class ClientTest {
+
+	Client monC;
+	
+	abstract protected Client creerClient();
+
+	
 	@Test
 	public void testClientString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testClientStringVehiculeTicket() {
-		fail("Not yet implemented");
+		monC = creerClient();
+		assertEquals("Robert",monC.getName());
 	}
 
 	@Test
 	public void testDermanderTicket() {
-		fail("Not yet implemented");
+		monC = creerClient();
+		int nbTicket = monC.getListeTickets().size();
+		Borne b = new Borne();
+		monC.dermanderTicket(b);
+		assertEquals(nbTicket+1,monC.getListeTickets().size());
 	}
 
 	@Test
