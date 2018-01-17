@@ -28,9 +28,10 @@ public class ClientTest {
 	@Test
 	public void testDermanderTicket() {
 		monC = creerClient();
-		int nbTicket = monC.getListeTickets().size();
 		Borne b = new Borne();
 		Vehicule v1 = new Vehicule(TypeVehicule.Voiture);
+		
+		int nbTicket = monC.getListeTickets().size();
 
 		monC.demanderTicket(b, v1);
 		assertEquals(nbTicket+1,monC.getListeTickets().size());
