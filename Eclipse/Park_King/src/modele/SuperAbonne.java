@@ -27,11 +27,15 @@ public class SuperAbonne extends Abonne {
 		// TODO Auto-generated constructor stub
 	}
 
+    public SuperAbonne() {
+    	super();
+    }
 	//## operation gererPackVIP() 
     public void gererPackVIP() {
-        //#[ operation gererPackVIP() 
-        //#]
+        
     }
+    
+    
     
 }
 /*********************************************************************

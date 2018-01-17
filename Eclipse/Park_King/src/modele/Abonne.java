@@ -25,6 +25,10 @@ public class Abonne extends Client {
 		super(n);
 		// TODO Auto-generated constructor stub
 	}
+    
+    public Abonne() {
+    	super();
+    }
 
 	protected int numAbonne;		//## attribute numAbonne 
     
