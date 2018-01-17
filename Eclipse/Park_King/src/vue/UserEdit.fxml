@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vue.UserViewController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane orientation="VERTICAL" prefHeight="398.0" prefWidth="295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="293.0">
+                     <children>
+                        <GridPane layoutX="24.0" layoutY="25.0" prefHeight="157.0" prefWidth="598.0" AnchorPane.bottomAnchor="241.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="112.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="476.0" minWidth="10.0" prefWidth="476.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints fx:id="Nom" maxHeight="175.0" minHeight="0.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="199.0" minHeight="0.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="168.0" minHeight="0.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="214.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="48.0" prefWidth="175.0" text="Nom :" />
+                              <Label text="Type :" GridPane.rowIndex="2" />
+                              <Label fx:id="firstNameLabel" layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="175.0" text="label" GridPane.columnIndex="1" />
+                              <RadioButton mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="RadioButton" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="131.0" text="RadioButton" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="137.0" text="RadioButton" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <ProgressIndicator layoutX="272.0" layoutY="338.0" progress="0.0" />
+                        <Button layoutX="50.0" layoutY="227.0" mnemonicParsing="false" text="Ajouter Voiture" />
+                        <Button layoutX="78.0" layoutY="280.0" mnemonicParsing="false" text="Ajouter ticket" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+      <Button layoutX="-45.0" layoutY="-30.0" mnemonicParsing="false" text="Button" />
+   </children>
+</AnchorPane>
