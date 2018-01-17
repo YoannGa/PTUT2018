@@ -57,6 +57,10 @@ public class Parking {
     	this.listeDeuxRoues = new HashMap<>();
     	this.listePoidsLourds = new HashMap<>();    	
     	
+    	this.emplacementsVoitures = new HashSet<>();
+    	this.emplacementsDeuxRoues = new HashSet<>();
+    	this.emplacementsLourds = new HashSet<>();
+    	
     	this.nbVoituresMax = nbEmplacementVoitures;
     	this.nbDeuxRouesMax = nbEmplacementDeuxRoues;
     	this.nbPoidsLourdsMax = nbEmplacementPoidsLourds;
