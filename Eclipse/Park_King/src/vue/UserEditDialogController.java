@@ -10,10 +10,10 @@ import modele.Client;
 public class UserEditDialogController {
 
 	@FXML
-    private TextField firstNameField;
+    private TextField nameField;
 	
 	private Stage dialogStage;
-    private Client person;
+    private Client client;
     private boolean okClicked = false;
     
     /**
@@ -34,13 +34,13 @@ public class UserEditDialogController {
     }
 
     /**
-     * Sets the person to be edited in the dialog.
+     * Sets the client to be edited in the dialog.
      *
-     * @param person
+     * @param client
      */
-    public void setPerson(Client person) {
-        this.person = person;
-        firstNameField.setText(person.getName());
+    public void setClient(Client client) {
+        this.client = client;
+        nameField.setText(client.getName());
     }
     
     /**
@@ -58,7 +58,7 @@ public class UserEditDialogController {
     @FXML
     private void handleOk() {
         if (isInputValid()) {
-            person.setName(firstNameField.getText());
+        	client.setName(nameField.getText());
 
             okClicked = true;
             dialogStage.close();
@@ -81,7 +81,7 @@ public class UserEditDialogController {
     private boolean isInputValid() {
         String errorMessage = "";
 
-        if (firstNameField.getText() == null || firstNameField.getText().length() == 0) {
+        if (nameField.getText() == null || nameField.getText().length() == 0) {
             errorMessage += "Nom invalide !\n";
         }
         
