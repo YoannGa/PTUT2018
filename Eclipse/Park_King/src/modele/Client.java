@@ -40,6 +40,10 @@ public class Client {
     	this.listeTickets = new ArrayList<>();    	
     }
     
+    public Client () {
+    	this.name = new SimpleStringProperty("Bob");
+    	this.listeTickets = new ArrayList<>();
+    }
     
     
     public Client(String n, Vehicule v, Ticket t){
@@ -57,7 +61,7 @@ public class Client {
     //## operation dermanderTicket(Borne) 
     public void demanderTicket(Borne b, Vehicule v) {
        
-        this.listeTickets.add(b.nouveauTicket(v););
+        this.listeTickets.add(b.nouveauTicket(v));
     }
     
     /**
