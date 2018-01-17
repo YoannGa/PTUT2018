@@ -6,16 +6,20 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import modele.Abonne;
 import modele.Client;
+import modele.SuperAbonne;
 
 public class UserViewController {
 
 	 @FXML
-	    private TableView<Client> personTable;
+	    private TableView<Client> clientTable;
 	    @FXML
-	    private TableColumn<Client, String> firstNameColumn;
+	    private TableColumn<Client, String> clientList;
 	    @FXML
-	    private Label firstNameLabel;
+	    private Label nameLabel;	    
+	    @FXML
+	    private Label typeLabel;
 
 	    // Reference to the main application.
 	    private UserViewMain mainApp;
@@ -33,34 +37,43 @@ public class UserViewController {
 	     */
 	    @FXML
 	    private void initialize() {
-	        // Initialize the person table with the two columns.
-	        firstNameColumn.setCellValueFactory(
+	        // Initialize the client table.
+	        clientList.setCellValueFactory(
 	                cellData -> cellData.getValue().firstNameProperty());
 
-	        // Clear person details.
-	        showPersonDetails(null);
+	        // Clear client details.
+	        showClientDetails(null);
 
-	        // Listen for selection changes and show the person details when changed.
-	        personTable.getSelectionModel().selectedItemProperty().addListener(
-	                (observable, oldValue, newValue) -> showPersonDetails(newValue));
+	        // Listen for selection changes and show the client details when changed.
+	        clientTable.getSelectionModel().selectedItemProperty().addListener(
+	                (observable, oldValue, newValue) -> showClientDetails(newValue));
 	    }
 	    
 	    /**
-	     * Fills all text fields to show details about the person.
-	     * If the specified person is null, all text fields are cleared.
+	     * Fills all text fields to show details about the client.
+	     * If the specified client is null, all text fields are cleared.
 	     *
-	     * @param person the person or null
+	     * @param client the client or null
 	     */
-	    private void showPersonDetails(Client person) {
-	        if (person != null) {
-	            // Fill the labels with info from the person object.
-	            firstNameLabel.setText(person.getName());
-
-	            // TODO: We need a way to convert the birthday into a String!
-	            // birthdayLabel.setText(...);
+	    private void showClientDetails(Client client) {
+	        if (client != null) {
+	            // Fill the labels with info from the client object.
+	            nameLabel.setText(client.getName());
+	            
+	            if(client instanceof SuperAbonne) { 
+	            	typeLabel.setText("Super Abonné");
+	            } else {
+	            	if(client instanceof Abonne) { 
+		            	typeLabel.setText("Abonné");
+		            } else {
+			            typeLabel.setText("Sans abonnement");
+		            }
+	            }
+	            
 	        } else {
-	            // Person is null, remove all the text.
-	            firstNameLabel.setText("");
+	            // client is null, remove all the text.
+	            nameLabel.setText("");
+	            typeLabel.setText("");
 	        }
 	    }
 
@@ -73,17 +86,17 @@ public class UserViewController {
 	        this.mainApp = mainApp;
 
 	        // Add observable list data to the table
-	        personTable.setItems(mainApp.getPersonData());
+	        clientTable.setItems(mainApp.getClientData());
 	    }
 	    
 	    /**
 	     * Called when the user clicks on the delete button.
 	     */
 	    @FXML
-	    private void handleDeletePerson() {
-	        int selectedIndex = personTable.getSelectionModel().getSelectedIndex();
+	    private void handleDeleteClient() {
+	        int selectedIndex = clientTable.getSelectionModel().getSelectedIndex();
 	        if (selectedIndex >= 0) {
-	            personTable.getItems().remove(selectedIndex);
+	            clientTable.getItems().remove(selectedIndex);
 	        } else {
 	            // Nothing selected.
 	            Alert alert = new Alert(AlertType.WARNING);
@@ -98,28 +111,27 @@ public class UserViewController {
 	    
 	    /**
 	     * Called when the user clicks the new button. Opens a dialog to edit
-	     * details for a new person.
+	     * details for a new client.
 	     */
 	    @FXML
-	    private void handleNewPerson() {
-	        Client tempPerson = new Client();
-	        boolean okClicked = mainApp.showPersonEditDialog(tempPerson);
+	    private void handleNewClient() {
+	        Client tempClient = new Client();
+	        boolean okClicked = mainApp.showClientEditDialog(tempClient);
 	        if (okClicked) {
-	            mainApp.getPersonData().add(tempPerson);
+	            mainApp.getClientData().add(tempClient);
 	        }
 	    }
 
 	    /**
 	     * Called when the user clicks the edit button. Opens a dialog to edit
-	     * details for the selected person.
+	     * details for the selected client.
 	     */
 	    @FXML
-	    private void handleEditPerson() {
-	        Client selectedPerson = personTable.getSelectionModel().getSelectedItem();
-	        if (selectedPerson != null) {
-	            boolean okClicked = mainApp.showPersonEditDialog(selectedPerson);
+	    private void handleEditClient() {
+	        Client selectedClient = clientTable.getSelectionModel().getSelectedItem();
+	        if (selectedClient != null) {
+	            boolean okClicked = mainApp.showClientEditDialog(selectedClient);
 	            if (okClicked) {
-	                showPersonDetails(selectedPerson);
 	            }
 
 	        } else {

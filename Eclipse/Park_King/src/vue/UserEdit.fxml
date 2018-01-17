@@ -35,11 +35,11 @@
                               <RadioButton mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="Sans abonnement" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="131.0" text="Abonné" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                               <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="137.0" text="Super abonné" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <TextField fx:id="firstNameField" prefHeight="25.0" prefWidth="100.0" GridPane.columnIndex="1" />
+                              <TextField fx:id="nameField" prefHeight="25.0" prefWidth="100.0" GridPane.columnIndex="1" />
                            </children>
                         </GridPane>
-                        <Button layoutX="50.0" layoutY="227.0" mnemonicParsing="false" text="Ajouter Voiture" />
-                        <Button layoutX="50.0" layoutY="264.0" mnemonicParsing="false" text="Ajouter ticket" />
+                        <Button layoutX="50.0" layoutY="227.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Ajouter Voiture" AnchorPane.rightAnchor="451.0" />
+                        <Button layoutX="47.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Ajouter ticket" />
                         <Button layoutX="433.0" layoutY="332.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="25.0" prefWidth="60.0" text="Valider" />
                         <Button layoutX="509.0" layoutY="332.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="60.0" text="Annuler" />
                      </children>

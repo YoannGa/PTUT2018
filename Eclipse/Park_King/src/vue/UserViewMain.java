@@ -12,33 +12,40 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import modele.Client;
+import modele.SuperAbonne;
+import modele.Abonne;
 
 public class UserViewMain extends Application {
 
     private Stage primaryStage;
     private BorderPane rootLayout;
     /**
-     * The data as an observable list of Persons.
+     * The data as an observable list of clients.
      */
-    private ObservableList<Client> personData = FXCollections.observableArrayList();
+    private ObservableList<Client> clientData = FXCollections.observableArrayList();
 
     /**
      * Constructor
      */
     public UserViewMain() {
         // Add some sample data
-        personData.add(new Client("Lydia"));
-        personData.add(new Client("Anna"));
-        personData.add(new Client("Stefan"));
-        personData.add(new Client("Martin"));
+        clientData.add(new Client("Lydia"));
+        clientData.add(new Client("Clarisse"));
+        clientData.add(new Client("Yoann"));
+        
+        clientData.add(new Abonne("Anna"));
+        clientData.add(new Abonne("Lino"));
+        
+        clientData.add(new SuperAbonne("Stefan"));
+        clientData.add(new SuperAbonne("Arnaud"));
     }
 
     /**
-     * Returns the data as an observable list of Persons. 
+     * Returns the data as an observable list of clients. 
      * @return
      */
-    public ObservableList<Client> getPersonData() {
-        return personData;
+    public ObservableList<Client> getClientData() {
+        return clientData;
     }
 
     @Override
@@ -47,7 +54,7 @@ public class UserViewMain extends Application {
         this.primaryStage.setTitle("Park-King");
 
         initRootLayout();
-        showPersonOverview();
+        showClientOverview();
     }
 
     /**
@@ -70,17 +77,17 @@ public class UserViewMain extends Application {
     }
 
     /**
-     * Shows the person overview inside the root layout.
+     * Shows the client overview inside the root layout.
      */
-    public void showPersonOverview() {
+    public void showClientOverview() {
         try {
-            // Load person overview.
+            // Load client overview.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(UserViewMain.class.getResource("UserView.fxml"));
-            AnchorPane personOverview = (AnchorPane) loader.load();
+            AnchorPane clientOverview = (AnchorPane) loader.load();
 
-            // Set person overview into the center of root layout.
-            rootLayout.setCenter(personOverview);
+            // Set client overview into the center of root layout.
+            rootLayout.setCenter(clientOverview);
             
             // Give the controller access to the main app.
             UserViewController controller = loader.getController();
@@ -92,14 +99,14 @@ public class UserViewMain extends Application {
     }
     
     /**
-     * Opens a dialog to edit details for the specified person. If the user
-     * clicks OK, the changes are saved into the provided person object and true
+     * Opens a dialog to edit details for the specified client. If the user
+     * clicks OK, the changes are saved into the provided client object and true
      * is returned.
      *
-     * @param person the person object to be edited
+     * @param client the client object to be edited
      * @return true if the user clicked OK, false otherwise.
      */
-    public boolean showPersonEditDialog(Client person) {
+    public boolean showClientEditDialog(Client client) {
         try {
             // Load the fxml file and create a new stage for the popup dialog.
             FXMLLoader loader = new FXMLLoader();
@@ -114,10 +121,10 @@ public class UserViewMain extends Application {
             Scene scene = new Scene(page);
             dialogStage.setScene(scene);
 
-            // Set the person into the controller.
+            // Set the client into the controller.
             UserEditDialogController controller = loader.getController();
             controller.setDialogStage(dialogStage);
-            controller.setPerson(person);
+            controller.setClient(client);
 
             // Show the dialog and wait until the user closes it
             dialogStage.showAndWait();
