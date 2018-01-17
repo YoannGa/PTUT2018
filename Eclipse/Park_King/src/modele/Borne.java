@@ -27,6 +27,19 @@ public class Borne {
     protected Acces a;
    
     
+    public Borne() {
+    	this.tp = new Teleporteur();
+    	this.a = new Acces();
+    	
+    }
+    
+    public Borne(Parking p) {
+    	this.tp = new Teleporteur(p);
+    	this.a = new Acces();
+    	
+    }
+    
+    
     /**
      * @param t
     */

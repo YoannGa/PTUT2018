@@ -81,9 +81,8 @@ public class Client {
     }
     
     //## operation recupVehicule() 
-    public void recupVehicule() {
-        //#[ operation recupVehicule() 
-        //#]
+    public void recupVehicule(Ticket t,Borne b) {
+        b.activerRetrait(t);
     }
 
 	public String getName() {

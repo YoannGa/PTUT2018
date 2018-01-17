@@ -22,7 +22,7 @@ public class ClientTest {
 	@Test
 	public void testClientString() {
 		monC = creerClient();
-		assertEquals("bob",monC.getName());
+		assertEquals("Bob",monC.getName());
 	}
 
 	@Test

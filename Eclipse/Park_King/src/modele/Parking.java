@@ -86,6 +86,7 @@ public class Parking {
     //## operation ajouterVehicule(Vehicule) 
     
     public void ajouterVehicule(int e, Vehicule v) {    	
+    	
     	if(v.getType().equals(TypeVehicule.Voiture)) {  		
     		listeVoitures.put(e, v);
     	}else if(v.getType().equals(TypeVehicule.DeuxRoues)) {  		
@@ -160,16 +161,6 @@ public class Parking {
         		} 
     	return false;
     }
-
-	public int getVMax() {
-		return nbVoituresMax;
-	}
-	public int getMMax() {
-		return nbDeuxRouesMax;
-	}
-	public int getCMax() {
-		return nbPoidsLourdsMax;
-	}
 }
 /*********************************************************************
 	File Path	: DefaultComponent/DefaultConfig/Default/DC_Parking.java

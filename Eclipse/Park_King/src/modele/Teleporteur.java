@@ -40,6 +40,16 @@ public class Teleporteur {
      * @param emplacement
     */
     //## operation garerVehicule(Vehicule,int) 
+    
+    
+    public Teleporteur() {
+    	this(new Parking());
+    }
+    
+    public Teleporteur(Parking p) {
+    	this.parking = p;
+    }
+    
     public void garerVehicule(Ticket t) {
         if(t.getP().equals(parking)) {
         	parking.ajouterVehicule(t.getNumEmplacement(), t.getV());
@@ -86,17 +96,18 @@ public class Teleporteur {
     
    
     public Parking assignerParking(Vehicule v) { // assigne un parking p à un vehicule v
-    	Parking p = null;
+    	
     	if (this.verifPlaceDispo(v, this.parking)) {
-    		p = this.parking;
+    		return this.parking;
     	}else {
     		for(Parking p2 : this.parkingTiers) {
     			if (this.verifPlaceDispo(v, p2)) {
-    	    		p = this.parking;
+    	    		return p2;
     	    	}
     		}    		
-    	}    	
-    	return p;
+    	}   	
+    	throw new IllegalAccessError("Aucune place dans aucun parking :'(");
+    	
     }
     
     
