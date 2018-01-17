@@ -59,12 +59,7 @@ public class UserEditDialogController {
     @FXML
     private void handleOk() {
         if (isInputValid()) {
-            person.setFirstName(firstNameField.getText());
-            person.setLastName(lastNameField.getText());
-            person.setStreet(streetField.getText());
-            person.setPostalCode(Integer.parseInt(postalCodeField.getText()));
-            person.setCity(cityField.getText());
-            person.setBirthday(DateUtil.parse(birthdayField.getText()));
+            person.setName(firstNameField.getText());
 
             okClicked = true;
             dialogStage.close();
@@ -107,4 +102,4 @@ public class UserEditDialogController {
         }
     }
 }
-}
+
