@@ -8,15 +8,15 @@ public class Acces {
 		return this.cam.vehiculePresent();			
 	}
 	
-	public Vehicule identifierVehicule() {		
+	public Vehicule identifierVehicule() {	//identifie le type de vehicule et sa plaque d'imatriculation (ici générée aléatoirement)	
 		Vehicule v = null;
 		int volume = this.cam.scanVehicule();
 		if(volume<34) {
-			v = new Vehicule("DeuxRoues") ;
+			v = new Vehicule(TypeVehicule.DeuxRoues, (Math.random()*100)+"M"+ (Math.random()*100)) ;			
 			}else if(volume > 66) {
-				v = new Vehicule(PoidsLourd) ;
+				v = new Vehicule(TypeVehicule.PoidsLourd, (Math.random()*100)+"C"+ (Math.random()*100)) ;
 				}else {
-					v = new Vehicule(Voiture) ;
+					v = new Vehicule(TypeVehicule.Voiture, (Math.random()*100)+"V"+ (Math.random()*100)) ;
 		}
 		return v;
 	}
