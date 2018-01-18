@@ -25,6 +25,8 @@ import javafx.beans.property.StringProperty;
 
 //## class DC_Client 
 public class Client {
+	
+	protected StringProperty id;
     
     protected StringProperty name;		//## attribute name 
     
@@ -36,12 +38,16 @@ public class Client {
     
     
     public Client(String n){
+    	int i = (int) (Math.random()*1000);    	
+    	this.id = new SimpleStringProperty(i+"");
     	this.name = new SimpleStringProperty(n);
     	this.listeTickets = new ArrayList<>();  
     	this.listeVehicule = new ArrayList<>();
     }
     
     public Client () {
+    	int i = (int) (Math.random()*1000);    	
+    	this.id = new SimpleStringProperty(i+"");
     	this.name = new SimpleStringProperty("Bob");
     	this.listeTickets = new ArrayList<>();
     	this.listeVehicule = new ArrayList<>();
@@ -49,6 +55,8 @@ public class Client {
     
     
     public Client(String n, Vehicule v, Ticket t){
+    	int i = (int) (Math.random()*1000);    	
+    	this.id = new SimpleStringProperty(i+"");
     	this.name = new SimpleStringProperty(n);
     	this.listeTickets = new ArrayList<>();
     	this.listeVehicule = new ArrayList<>();
@@ -57,6 +65,8 @@ public class Client {
     }
     
     public Client(String n, ArrayList<Vehicule> v, ArrayList<Ticket> t){
+    	int i = (int) (Math.random()*1000);    	
+    	this.id = new SimpleStringProperty(i+"");
     	this.name = new SimpleStringProperty(n);
     	this.listeTickets = t;
     	this.listeVehicule = v;
@@ -126,6 +136,21 @@ public class Client {
 	
 	public void addVehicule(Vehicule v) {
 		this.listeVehicule.add(v);
+	}
+
+	public StringProperty getId() {
+		return id;
+	}
+
+	public String getIdString() {
+		return this.id.get();
+	}
+	public void setId(StringProperty id) {
+		this.id = id;
+	}
+
+	public void setName(StringProperty name) {
+		this.name = name;
 	}
 	
     
