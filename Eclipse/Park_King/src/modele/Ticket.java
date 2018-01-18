@@ -24,6 +24,7 @@ import javafx.beans.property.StringProperty;
 public class Ticket {
 	
 	protected StringProperty id;
+	
 	protected Vehicule v;
     
     protected Parking p;		//## attribute p 
