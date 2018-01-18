@@ -27,6 +27,7 @@ public class Vehicule {
     
     protected TypeVehicule type;
     
+    
     protected StringProperty imatriculation;		//## attribute imatriculation 
     
     protected Client itsDC_Client;		//## link itsDC_Client 

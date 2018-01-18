@@ -53,6 +53,7 @@ public class Teleporteur {
     }
     
     public void garerVehicule(Ticket t) {
+    	t.getClient().listeTickets.add(t);
         if(t.getP().equals(parking)) {
         	parking.ajouterVehicule(t.getNumEmplacement(), t.getV());
         	 t.getV().setEstGare(true);
