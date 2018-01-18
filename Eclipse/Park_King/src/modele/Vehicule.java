@@ -29,15 +29,16 @@ public class Vehicule {
     
     protected Client itsDC_Client;		//## link itsDC_Client 
     
-    protected String heureDeLivraison;
+    protected String heureDeLivraison = "";
     
-    protected String lieuDeLivraison;
+    protected String lieuDeLivraison = "";
     
     
    // protected DC_Parking itsDC_Parking;		//## link itsDC_Parking 
     
     public Vehicule(TypeVehicule t) {    	
     	this.type = t;    	
+    	
     };
     
     public Vehicule(TypeVehicule t, String ima) {    	
