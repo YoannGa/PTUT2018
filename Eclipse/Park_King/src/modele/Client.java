@@ -79,7 +79,9 @@ public class Client {
     public Ticket demanderTicket(Borne b, Vehicule v) {
        Ticket t = b.nouveauTicket(v);
        t.setClient(this);
+       
         this.getListeTickets().add(t);
+        System.out.println(this.getListeTickets());
         return t;
     }
     
