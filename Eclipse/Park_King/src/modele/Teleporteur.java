@@ -55,16 +55,18 @@ public class Teleporteur {
     public void garerVehicule(Ticket t) {
         if(t.getP().equals(parking)) {
         	parking.ajouterVehicule(t.getNumEmplacement(), t.getV());
+        	 t.getV().setEstGare(true);
         }else if(t.client instanceof SuperAbonne) {
         	for(Parking p2 : parkingTiers) {
         		if(t.getP().equals(p2)) {
                 	p2.ajouterVehicule(t.getNumEmplacement(), t.getV());
+                	 t.getV().setEstGare(true);
                 }
         	}
         }else {
         	throw new IllegalAccessError("Pas de place, déso pas déso");
         }
-        
+       
     }
     
     /**
@@ -75,10 +77,12 @@ public class Teleporteur {
     	
     	if(t.getP().equals(parking)) {
         	parking.retirerVehicule(t.getNumEmplacement(), t.getV());
+        	t.getV().setEstGare(false);
         }else {
         		for(Parking p2 : parkingTiers) {
         			if(t.getP().equals(p2)) {
         				p2.retirerVehicule(t.getNumEmplacement(), t.getV());
+        				t.getV().setEstGare(false);
         			}
         		}        	
         }

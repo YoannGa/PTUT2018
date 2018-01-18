@@ -35,16 +35,19 @@ public class Vehicule {
     
     protected String lieuDeLivraison = "";
     
+    protected boolean estGare;
+    
     
    // protected DC_Parking itsDC_Parking;		//## link itsDC_Parking 
     
     public Vehicule(TypeVehicule t) {    	
     	this.type = t;    	
+    	this.estGare = false;
     	
     };
     
     public Vehicule(TypeVehicule t, String ima) {    	
-    	this.type = t;    	
+    	this(t);    	
     	this.imatriculation = new SimpleStringProperty(ima);
     };
     
@@ -91,6 +94,14 @@ public class Vehicule {
 
 	public void setLieuDeLivraison(String lieuDeLivraison) {
 		this.lieuDeLivraison = lieuDeLivraison;
+	}
+
+	public boolean isEstGare() {
+		return estGare;
+	}
+
+	public void setEstGare(boolean estGare) {
+		this.estGare = estGare;
 	}
     
 }
