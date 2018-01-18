@@ -1,12 +1,26 @@
 package vue;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import modele.Client;
 import modele.Ticket;
 
 public class TicketController {
-
-    private Client client;
+	
+	@FXML
+    private TableView<Ticket> ticketTable;
+	@FXML
+    private TableColumn<Ticket, String> ticketList;
+    @FXML
+    private Label vehiculeLabel;	    
+    @FXML
+    private Label parkingLabel; 
+    @FXML
+    private Label placeLabel; 
+	
+	private Client client;
     // Reference to the main application.
     private UserViewMain mainApp;
 
@@ -23,10 +37,16 @@ public class TicketController {
      */
     @FXML
     private void initialize() {
-
-        // Clear ticket details.
-    	showTicketDetails(null);
+        // Initialize the vehicle table.
+    	ticketList.setCellValueFactory(
+    			cellData -> cellData.getValue().getIdString());
+    	
+        // Clear vehicle details.
+        showTicketDetails(null);
         
+	    //Listen for selection changes and show the client details when changed.
+	    ticketTable.getSelectionModel().selectedItemProperty().addListener(
+	                (observable, oldValue, newValue) -> showTicketDetails(newValue));
     }
     
     /**
@@ -36,6 +56,9 @@ public class TicketController {
      */
     public void setMainApp(UserViewMain mainApp) {
         this.mainApp = mainApp;
+        
+        // Add observable list data to the table
+        ticketTable.setItems(mainApp.getTicketData(client));
     }
     
     /**
@@ -63,17 +86,15 @@ public class TicketController {
      */
     private void showTicketDetails(Ticket ticket) {
         if (ticket != null) {
-        	/*
+        	
             // Fill the labels with info from the client object.
-            nameLabel.setText(client.getName());
-            
-            }*/
+            //nameLabel.setText(client.getName());
             
         } else {
-            // client is null, remove all the text.
-        	/*longueurLabel.setText("");
-            largeurLabel.setText("");
-            plaqueLabel.setText("");*/
+            // ticket is null, remove all the text.
+            vehiculeLabel.setText("");	 
+            parkingLabel.setText(""); 
+            placeLabel.setText(""); 
         }
     }
 }

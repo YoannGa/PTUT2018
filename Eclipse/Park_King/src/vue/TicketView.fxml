@@ -20,9 +20,9 @@
 		        <items>
 		        	<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
 		        		<children>
-							<TableView prefHeight="398.0" prefWidth="295.0">
+							<TableView fx:id="ticketTable" prefHeight="398.0" prefWidth="295.0">
 				        		<columns>
-				          		   	<TableColumn prefWidth="294.0" text="Ticket" />
+				          		   	<TableColumn fx:id="ticketList" prefWidth="294.0" text="Ticket" />
 				          		</columns>
 				        	</TableView>
 		            	</children>

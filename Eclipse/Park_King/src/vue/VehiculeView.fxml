@@ -28,7 +28,7 @@
 					</AnchorPane>
 		          	<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
 		        		<children>			
-				            <GridPane layoutX="16.0" layoutY="2.0" prefHeight="90.0" prefWidth="265.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+				            <GridPane layoutX="20.0" layoutY="15.0">
 				               <columnConstraints>
 				                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 				                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -39,12 +39,10 @@
 				                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 				               </rowConstraints>
 				               <children>
-				                  <Label prefHeight="48.0" prefWidth="175.0" text="Plaque :" />
-				                  <Label text="Longueur :" GridPane.rowIndex="1" />
-				                  <Label text="Largeur :" GridPane.rowIndex="2" />
+      				                  <Label prefHeight="48.0" prefWidth="175.0" text="Plaque :" />
+      				                  <Label text="Type :" GridPane.rowIndex="1" />
                               <Label fx:id="plaqueLabel" text="Label" GridPane.columnIndex="1" />
-                              <Label fx:id="longueurLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Label fx:id="largeurLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="typeLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 				               </children>
 				            </GridPane>
                         <Button layoutX="14.0" layoutY="130.0" mnemonicParsing="false" prefWidth="60.0" text="Garer" AnchorPane.leftAnchor="20.0" />

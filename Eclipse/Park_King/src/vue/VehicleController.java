@@ -19,10 +19,9 @@ public class VehicleController {
     @FXML
     private Label plaqueLabel;	    
     @FXML
-    private Label longueurLabel; 
-    @FXML
-    private Label largeurLabel;
+    private Label typeLabel; 
     
+    ArrayList<Vehicule> vehicleArray;
     private Client client;
     // Reference to the main application.
     private UserViewMain mainApp;
@@ -41,11 +40,9 @@ public class VehicleController {
     @FXML
     private void initialize() {
         // Initialize the vehicle table.
-    	ArrayList<Vehicule> vehicleArray = client.getListeVehicule();
-    	for(Vehicule vehicle : vehicleArray){
-    		vehicleList.setCellValueFactory(
-    				cellData -> cellData.getValue().getImatriculation());
-    	}
+    	vehicleList.setCellValueFactory(
+    			cellData -> cellData.getValue().getImatriculationProperty());
+    	
     	
         // Clear vehicle details.
         showVehicleDetails(null);
@@ -74,6 +71,8 @@ public class VehicleController {
      */
     public void setClient(Client client) {
     	this.client = client;
+
+        vehicleArray = client.getListeVehicule();
     }
     
     /**
@@ -93,16 +92,11 @@ public class VehicleController {
     private void showVehicleDetails(Vehicule vehicle) {
         if (vehicle != null) {
             // Fill the labels with info from the vehicle object.
-        	longueurLabel.setText("");
-            largeurLabel.setText("");
-            plaqueLabel.setText("");
-            
-            }
-            
+        	typeLabel.setText(vehicle.getType().toString());
+            plaqueLabel.setText(vehicle.getImatriculation());
         } else {
             // vehicule is null, remove all the text.
-        	longueurLabel.setText("");
-            largeurLabel.setText("");
+        	typeLabel.setText("");
             plaqueLabel.setText("");
         }
     }

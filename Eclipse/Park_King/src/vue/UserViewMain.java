@@ -14,6 +14,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import modele.Client;
 import modele.SuperAbonne;
+import modele.Ticket;
 import modele.TypeVehicule;
 import modele.Vehicule;
 import modele.Abonne;
@@ -30,6 +31,10 @@ public class UserViewMain extends Application {
      * The data as an observable list of vehicles.
      */
     private ObservableList<Vehicule> vehicleData = FXCollections.observableArrayList();
+    /**
+     * The data as an observable list of tickets.
+     */
+    private ObservableList<Ticket> ticketData = FXCollections.observableArrayList();
     
     /**
      * Constructor
@@ -60,6 +65,18 @@ public class UserViewMain extends Application {
     		vehicleData.add(vehicle);
     	}
         return vehicleData;
+    }
+    
+    /**
+     * Returns the data as an observable list of tickets. 
+     * @return
+     */
+    public ObservableList<Ticket> getTicketData(Client client) {
+    	ArrayList<Ticket> ticketArray = client.getListeTickets();
+    	for(Ticket ticket : ticketArray){
+    		ticketData.add(ticket);
+    	}
+        return ticketData;
     }
 
     @Override
