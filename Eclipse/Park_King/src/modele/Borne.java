@@ -34,6 +34,7 @@ public class Borne {
     public Borne() {
     	this.tp = new Teleporteur();
     	this.a = new Acces();
+    
     	
     }
     
