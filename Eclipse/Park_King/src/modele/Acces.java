@@ -10,7 +10,7 @@ public class Acces {
 	
 	public Vehicule identifierVehicule() {	//identifie le type de vehicule et sa plaque d'imatriculation (ici générée aléatoirement)	
 		Vehicule v = null;
-		int volume = (int) (Math.random()*100);
+		int volume = this.cam.scanVehicule();
 		if(volume<34) {
 			v = new Vehicule(TypeVehicule.DeuxRoues, (Math.random()*100)+"M"+ (Math.random()*100)) ;			
 			}else if(volume > 66) {
