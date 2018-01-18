@@ -43,6 +43,9 @@ public class Borne {
     	
     }
     
+    public Vehicule idVehicule() {
+    	return a.identifierVehicule();
+    }
     
     /**
      * @param t
