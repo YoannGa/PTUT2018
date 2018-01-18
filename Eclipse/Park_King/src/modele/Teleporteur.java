@@ -44,10 +44,12 @@ public class Teleporteur {
     
     public Teleporteur() {
     	this(new Parking());
+    	this.parkingTiers = new ArrayList<>();
     }
     
     public Teleporteur(Parking p) {
     	this.parking = p;
+    	this.parkingTiers = new ArrayList<>();
     }
     
     public void garerVehicule(Ticket t) {

@@ -21,7 +21,7 @@ package modele;
 //## class DC_Camera 
 public class Camera {
     
-    protected Vehicule v;		//## link itsDC_Borne 
+ 	//## link itsDC_Borne 
     
     
     //## operation scanVehicule() 

@@ -12,6 +12,7 @@ public class Controller {
 			Parking p = new Parking (1,2,1);
 			Teleporteur tp = b.getTp();
 			tp.addParkingTier(p);
+			Vehicule v = b.getA().identifierVehicule();
 			
 		}
 
