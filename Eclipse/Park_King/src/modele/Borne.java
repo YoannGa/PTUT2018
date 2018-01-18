@@ -113,6 +113,38 @@ public class Borne {
     	v.setLieuDeLivraison(lieu);
      	this.listeVehiculeALivrer.add(v);
      }
+
+	public Teleporteur getTp() {
+		return tp;
+	}
+
+	public void setTp(Teleporteur tp) {
+		this.tp = tp;
+	}
+
+	public Acces getA() {
+		return a;
+	}
+
+	public void setA(Acces a) {
+		this.a = a;
+	}
+
+	public ArrayList<Vehicule> getListeVehiculeEnEntretiens() {
+		return listeVehiculeEnEntretiens;
+	}
+
+	public void setListeVehiculeEnEntretiens(ArrayList<Vehicule> listeVehiculeEnEntretiens) {
+		this.listeVehiculeEnEntretiens = listeVehiculeEnEntretiens;
+	}
+
+	public ArrayList<Vehicule> getListeVehiculeALivrer() {
+		return listeVehiculeALivrer;
+	}
+
+	public void setListeVehiculeALivrer(ArrayList<Vehicule> listeVehiculeALivrer) {
+		this.listeVehiculeALivrer = listeVehiculeALivrer;
+	}
     
 }
 /*********************************************************************

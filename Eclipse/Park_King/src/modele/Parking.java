@@ -190,6 +190,54 @@ public class Parking {
 		this.nbPoidsLourdsMax = nbPoidsLourdsMax;
 	}
 
+	public HashMap<Integer, Vehicule> getListeVoitures() {
+		return listeVoitures;
+	}
+
+	public void setListeVoitures(HashMap<Integer, Vehicule> listeVoitures) {
+		this.listeVoitures = listeVoitures;
+	}
+
+	public HashMap<Integer, Vehicule> getListeDeuxRoues() {
+		return listeDeuxRoues;
+	}
+
+	public void setListeDeuxRoues(HashMap<Integer, Vehicule> listeDeuxRoues) {
+		this.listeDeuxRoues = listeDeuxRoues;
+	}
+
+	public HashMap<Integer, Vehicule> getListePoidsLourds() {
+		return listePoidsLourds;
+	}
+
+	public void setListePoidsLourds(HashMap<Integer, Vehicule> listePoidsLourds) {
+		this.listePoidsLourds = listePoidsLourds;
+	}
+
+	public HashSet<Integer> getEmplacementsVoitures() {
+		return emplacementsVoitures;
+	}
+
+	public void setEmplacementsVoitures(HashSet<Integer> emplacementsVoitures) {
+		this.emplacementsVoitures = emplacementsVoitures;
+	}
+
+	public HashSet<Integer> getEmplacementsDeuxRoues() {
+		return emplacementsDeuxRoues;
+	}
+
+	public void setEmplacementsDeuxRoues(HashSet<Integer> emplacementsDeuxRoues) {
+		this.emplacementsDeuxRoues = emplacementsDeuxRoues;
+	}
+
+	public HashSet<Integer> getEmplacementsLourds() {
+		return emplacementsLourds;
+	}
+
+	public void setEmplacementsLourds(HashSet<Integer> emplacementsLourds) {
+		this.emplacementsLourds = emplacementsLourds;
+	}
+
 }
 
 /*********************************************************************
