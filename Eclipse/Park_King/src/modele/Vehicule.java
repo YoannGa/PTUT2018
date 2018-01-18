@@ -65,9 +65,11 @@ public class Vehicule {
 		this.type = type;
 	}
 
-	
+	public String getImatriculation() {
+		return imatriculation.get();
+	}
 
-	public StringProperty getImatriculation() {
+	public StringProperty getImatriculationProperty() {
 		return imatriculation;
 	}
 
