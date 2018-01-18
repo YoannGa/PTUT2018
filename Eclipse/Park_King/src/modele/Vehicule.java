@@ -29,6 +29,11 @@ public class Vehicule {
     
     protected Client itsDC_Client;		//## link itsDC_Client 
     
+    protected String heureDeLivraison;
+    
+    protected String lieuDeLivraison;
+    
+    
    // protected DC_Parking itsDC_Parking;		//## link itsDC_Parking 
     
     public Vehicule(TypeVehicule t) {    	
@@ -43,6 +48,8 @@ public class Vehicule {
     
     //## operation getVolume() 
  
+    
+    
 
 	
 
@@ -63,6 +70,22 @@ public class Vehicule {
 
 	public void setImatriculation(String imatriculation) {
 		this.imatriculation = imatriculation;
+	}
+
+	public String getHeureDeLivraison() {
+		return heureDeLivraison;
+	}
+
+	public void setHeureDeLivraison(String heureDeLivraison) {
+		this.heureDeLivraison = heureDeLivraison;
+	}
+
+	public String getLieuDeLivraison() {
+		return lieuDeLivraison;
+	}
+
+	public void setLieuDeLivraison(String lieuDeLivraison) {
+		this.lieuDeLivraison = lieuDeLivraison;
 	}
     
 }

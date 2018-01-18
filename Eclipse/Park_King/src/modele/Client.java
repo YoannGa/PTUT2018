@@ -121,6 +121,10 @@ public class Client {
 	public void setListeVehicule(ArrayList<Vehicule> listeVehicule) {
 		this.listeVehicule = listeVehicule;
 	}
+	
+	public void addVehicule(Vehicule v) {
+		this.listeVehicule.add(v);
+	}
     
 }
 /*********************************************************************

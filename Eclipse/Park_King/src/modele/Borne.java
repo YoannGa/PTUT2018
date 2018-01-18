@@ -10,6 +10,7 @@
 
 package modele;
 
+import java.util.ArrayList;
 
 //----------------------------------------------------------------------------
 // Default/DC_Borne.java                                                                  
@@ -26,6 +27,9 @@ public class Borne {
     
     protected Acces a;
    
+    protected ArrayList<Vehicule> listeVehiculeEnEntretiens;
+    
+    protected ArrayList<Vehicule> listeVehiculeALivrer;
     
     public Borne() {
     	this.tp = new Teleporteur();
@@ -96,6 +100,16 @@ public class Borne {
     public boolean verifValiditeTicket(Ticket t) {
     	return t.getP().vehiculePresent(t.getV());
     }
+    
+     public void ajouterVehiculeEntretien(Vehicule v) {    	
+    	this.listeVehiculeEnEntretiens.add(v);
+    }
+     
+     public void ajouterVehiculeLivraison(Vehicule v, String date, String lieu) {
+    	v.setHeureDeLivraison(date);
+    	v.setLieuDeLivraison(lieu);
+     	this.listeVehiculeALivrer.add(v);
+     }
     
 }
 /*********************************************************************
