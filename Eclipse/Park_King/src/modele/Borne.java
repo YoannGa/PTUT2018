@@ -88,7 +88,7 @@ public class Borne {
     
     //## operation rendreTicket() 
     public void rendreTicket() {
-       System.out.println("Opération invalide. Reprenez le ticket.");
+       System.out.println("Operation invalide. Reprenez le ticket.");
     }
     
     /**

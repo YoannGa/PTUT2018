@@ -25,7 +25,9 @@ public class Ticket {
     
     protected Parking p;		//## attribute p 
     
-    protected int numEmplacement;		//## attribute numEmplacement 
+    protected int numEmplacement;//## attribute numEmplacement 
+    
+    protected Client client;
     
     public Ticket(Vehicule v, Parking p, int num) {
     	this.v = v;
@@ -34,6 +36,10 @@ public class Ticket {
     }
     
    
+    public Client getClient() {
+    	return this.client;
+    }
+    
 
 	public Vehicule getV() {
 		return v;

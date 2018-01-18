@@ -127,6 +127,7 @@ public class Client {
 	public void addVehicule(Vehicule v) {
 		this.listeVehicule.add(v);
 	}
+	
     
 }
 /*********************************************************************
