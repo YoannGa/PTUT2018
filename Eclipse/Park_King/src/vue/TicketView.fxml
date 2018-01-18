@@ -43,14 +43,14 @@
 				                  <Label prefHeight="48.0" prefWidth="175.0" text="Parking :" />
 				                  <Label text="N° Place :" GridPane.rowIndex="1" />
 				                  <Label text="Vehicule : " GridPane.rowIndex="2" />
-                              <Label text="Label" GridPane.columnIndex="1" />
-                              <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="parkingLabel" text="Label" GridPane.columnIndex="1" />
+                              <Label fx:id="placeLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="vehiculeLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 				               </children>
 				            </GridPane>
                         <CheckBox layoutX="26.0" layoutY="119.0" mnemonicParsing="false" text="Maintenance" />
                         <CheckBox layoutX="26.0" layoutY="158.0" mnemonicParsing="false" text="Entretien" />
-                        <Button layoutX="24.0" layoutY="196.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Recuperer Vehicule" AnchorPane.leftAnchor="20.0" />
+                        <Button layoutX="24.0" layoutY="196.0" mnemonicParsing="false" onAction="#handleTakeVehicle" prefHeight="25.0" prefWidth="120.0" text="Recuperer Vehicule" AnchorPane.leftAnchor="20.0" />
                         <Button layoutX="24.0" layoutY="230.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Gestion livraison" AnchorPane.leftAnchor="20.0" />
 		               </children>
 					</AnchorPane>

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -22,6 +23,7 @@ public class VehicleController {
     private Label typeLabel; 
     @FXML
     private Label etatLabel; 
+    private Button garer;
     
     ArrayList<Vehicule> vehicleArray;
     private Client client;
@@ -96,14 +98,15 @@ public class VehicleController {
         	typeLabel.setText(vehicle.getType().toString());
             plaqueLabel.setText(vehicle.getImatriculation());
             if (vehicle.isEstGare()) {
-            	//etatLabel.setText("véhicule garé");
+            	etatLabel.setText("Véhicule garé");
             } else {
-            	etatLabel.setText("véhicule non garé");
+            	etatLabel.setText("Véhicule non garé");
             }
         } else {
             // vehicule is null, remove all the text.
         	typeLabel.setText("");
             plaqueLabel.setText("");
+        	etatLabel.setText("");
         }
     }
 
@@ -123,6 +126,6 @@ public class VehicleController {
     private void handleGarerVehicle() {
     	Vehicule selectedVehicle = vehicleTable.getSelectionModel().getSelectedItem();
     	mainApp.garerVehicle(selectedVehicle, client);
-    	vehicleTable.setItems(mainApp.getVehicleData(client));
+    	showVehicleDetails(selectedVehicle);
     }
 }

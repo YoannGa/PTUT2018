@@ -205,7 +205,7 @@ public class UserViewController {
 	        Client selectedClient = clientTable.getSelectionModel().getSelectedItem();
 	        if (selectedClient != null) {
 	        	ObservableList<Ticket> verifTicket = mainApp.getTicketData(selectedClient);
-	            if (verifTicket.size() != 0) {
+	            if (verifTicket.size() > 0) {
 	            	mainApp.showClientTicket(selectedClient);
 	            } else {
 		            Alert alert = new Alert(AlertType.WARNING);

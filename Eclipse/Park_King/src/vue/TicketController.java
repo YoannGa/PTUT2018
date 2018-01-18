@@ -6,6 +6,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import modele.Client;
 import modele.Ticket;
+import modele.Vehicule;
 
 public class TicketController {
 	
@@ -44,6 +45,7 @@ public class TicketController {
         showTicketDetails(null);
         
 	    //Listen for selection changes and show the client details when changed.
+        
 	    ticketTable.getSelectionModel().selectedItemProperty().addListener(
 	                (observable, oldValue, newValue) -> showTicketDetails(newValue));
     }
@@ -96,5 +98,15 @@ public class TicketController {
             parkingLabel.setText(""); 
             placeLabel.setText("");
         }
+    }
+    
+    /**
+     * Called when the user clicks recuperer.
+     */
+    @FXML
+    private void handleTakeVehicle() {
+    	Ticket selectedTicket = ticketTable.getSelectionModel().getSelectedItem();
+    	mainApp.takeVehicule(selectedTicket);
+    	ticketTable.setItems(mainApp.getTicketData(client));
     }
 }

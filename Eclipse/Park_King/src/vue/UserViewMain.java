@@ -29,14 +29,6 @@ public class UserViewMain extends Application {
      * The data as an observable list of clients.
      */
     private ObservableList<Client> clientData = FXCollections.observableArrayList();
-    /**
-     * The data as an observable list of vehicles.
-     */
-    private ObservableList<Vehicule> vehicleData = FXCollections.observableArrayList();
-    /**
-     * The data as an observable list of tickets.
-     */
-    private ObservableList<Ticket> ticketData = FXCollections.observableArrayList();
     
     /**
      * Constructor
@@ -50,16 +42,22 @@ public class UserViewMain extends Application {
      */
     public void newVehicle(Client client) {
     	Vehicule vehicle = borne.getA().identifierVehicule();
-    	getVehicleData(client).add(vehicle);
+    	client.addVehicule(vehicle);
     }
     
     /**
      * Gare the vehicle.
      */
     public void garerVehicle(Vehicule vehicle, Client client) {
-    	Ticket ticket = borne.nouveauTicket(vehicle);
-    	getTicketData(client).add(ticket);
+    	Ticket ticket = client.demanderTicket(borne, vehicle);
     	borne.activerGarer(ticket);
+    }
+    
+    /**
+     * Create a new vehicle.
+     */
+    public void takeVehicule(Ticket ticket) {
+    	borne.activerRetrait(ticket);
     }
 
     /**
@@ -75,6 +73,10 @@ public class UserViewMain extends Application {
      * @return
      */
     public ObservableList<Vehicule> getVehicleData(Client client) {
+        /**
+         * The data as an observable list of vehicles.
+         */
+        ObservableList<Vehicule> vehicleData = FXCollections.observableArrayList();
     	ArrayList<Vehicule> vehicleArray = client.getListeVehicule();
     	for(Vehicule vehicle : vehicleArray){
     		vehicleData.add(vehicle);
@@ -87,6 +89,10 @@ public class UserViewMain extends Application {
      * @return
      */
     public ObservableList<Ticket> getTicketData(Client client) {
+        /**
+         * The data as an observable list of tickets.
+         */
+        ObservableList<Ticket> ticketData = FXCollections.observableArrayList();
     	ArrayList<Ticket> ticketArray = client.getListeTickets();
 	    for(Ticket ticket : ticketArray){
 	    	ticketData.add(ticket);
@@ -224,8 +230,8 @@ public class UserViewMain extends Application {
 
             // Set the client into the controller.
             TicketController controller = loader.getController();
-            controller.setMainApp(this);
             controller.setClient(client);
+            controller.setMainApp(this);
 
         } catch (IOException e) {
             e.printStackTrace();
