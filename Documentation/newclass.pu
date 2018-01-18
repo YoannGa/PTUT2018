@@ -1,0 +1,90 @@
+@startuml
+
+
+rectangle controlleur{
+	class Controller [[java:controller.Controller]] {
+
+	}
+
+}
+rectangle modele{
+
+	class Abonne [[java:modele.Abonne]] {
+
+	}
+	class Client [[java:modele.client.Client]] {
+	}
+	class Acces [[java:modele.Acces]] {
+
+	}
+	class Borne [[java:modele.Borne]] {
+
+	}
+	class Camera [[java:modele.Camera]] {
+
+	}
+	class Client [[java:modele.Client]] {
+
+	}
+	class Parking [[java:modele.Parking]] {
+
+	}
+	class SuperAbonne [[java:modele.SuperAbonne]] {
+
+	}
+	class Abonne [[java:modele.Abonne]] {
+	}
+	class Teleporteur [[java:modele.Teleporteur]] {
+
+	}
+	class Ticket [[java:modele.Ticket]] {
+
+	}
+	enum TypeVehicule [[java:modele.TypeVehicule]] {
+
+	}
+	class Vehicule [[java:modele.Vehicule]] {
+
+	}
+
+}
+
+rectangle vue{
+	class RootMenuController [[java:vue.RootMenuController]] {
+	}
+	class TicketController [[java:vue.TicketController]] {
+
+	}
+	class UserEditDialogController [[java:vue.UserEditDialogController]] {
+
+	}
+	class UserViewController [[java:vue.UserViewController]] {
+
+	}
+	class UserViewMain [[java:vue.UserViewMain]] {
+
+	}
+	class Application {
+	}
+	class VehicleController [[java:vue.VehicleController]] {
+
+	}
+}
+
+
+
+Application <|-- UserViewMain
+Abonne <|-- SuperAbonne
+Client <|-- Abonne
+
+Parking -o Vehicule
+Ticket -- Borne
+Client -o Ticket
+Borne -* Teleporteur
+Camera *- Borne
+Teleporteur -o Parking
+Teleporteur -* Parking
+TypeVehicule -o Vehicule
+Acces -* Camera
+
+@enduml
