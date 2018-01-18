@@ -28,8 +28,7 @@ public class TicketController {
      * The constructor.
      * The constructor is called before the initialize() method.
      */
-    public TicketController() {
-    }
+    public TicketController() {}
     
     /**
      * Initializes the controller class. This method is automatically called
@@ -39,7 +38,7 @@ public class TicketController {
     private void initialize() {
         // Initialize the vehicle table.
     	ticketList.setCellValueFactory(
-    			cellData -> cellData.getValue().getIdString());
+    			cellData -> cellData.getValue().getId());
     	
         // Clear vehicle details.
         showTicketDetails(null);
@@ -86,15 +85,16 @@ public class TicketController {
      */
     private void showTicketDetails(Ticket ticket) {
         if (ticket != null) {
-        	
             // Fill the labels with info from the client object.
-            //nameLabel.setText(client.getName());
+            vehiculeLabel.setText(ticket.getV().getImatriculation());	 
+            parkingLabel.setText(ticket.getP().getIdString()); 
+            placeLabel.setText(ticket.getNumEmplacement()+"");
             
         } else {
             // ticket is null, remove all the text.
             vehiculeLabel.setText("");	 
             parkingLabel.setText(""); 
-            placeLabel.setText(""); 
+            placeLabel.setText("");
         }
     }
 }

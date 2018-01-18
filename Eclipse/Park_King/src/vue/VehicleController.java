@@ -20,6 +20,8 @@ public class VehicleController {
     private Label plaqueLabel;	    
     @FXML
     private Label typeLabel; 
+    @FXML
+    private Label etatLabel; 
     
     ArrayList<Vehicule> vehicleArray;
     private Client client;
@@ -30,8 +32,7 @@ public class VehicleController {
      * The constructor.
      * The constructor is called before the initialize() method.
      */
-    public VehicleController() {
-    }
+    public VehicleController() {}
     
     /**
      * Initializes the controller class. This method is automatically called
@@ -41,8 +42,7 @@ public class VehicleController {
     private void initialize() {
         // Initialize the vehicle table.
     	vehicleList.setCellValueFactory(
-    			cellData -> cellData.getValue().getImatriculationProperty());
-    	
+    	    	cellData -> cellData.getValue().getImatriculationProperty());
     	
         // Clear vehicle details.
         showVehicleDetails(null);
@@ -61,7 +61,10 @@ public class VehicleController {
         this.mainApp = mainApp;
         
         // Add observable list data to the table
-        vehicleTable.setItems(mainApp.getVehicleData(client));
+        ObservableList<Vehicule> vehicleData = mainApp.getVehicleData(client);
+        if (vehicleData.size() != 0) {
+        	vehicleTable.setItems(vehicleData);
+        }
     }
     
     /**
@@ -71,8 +74,6 @@ public class VehicleController {
      */
     public void setClient(Client client) {
     	this.client = client;
-
-        vehicleArray = client.getListeVehicule();
     }
     
     /**
@@ -94,10 +95,34 @@ public class VehicleController {
             // Fill the labels with info from the vehicle object.
         	typeLabel.setText(vehicle.getType().toString());
             plaqueLabel.setText(vehicle.getImatriculation());
+            if (vehicle.isEstGare()) {
+            	//etatLabel.setText("véhicule garé");
+            } else {
+            	etatLabel.setText("véhicule non garé");
+            }
         } else {
             // vehicule is null, remove all the text.
         	typeLabel.setText("");
             plaqueLabel.setText("");
         }
+    }
+
+    /**
+     * Called when the user clicks the new vehicle button. 
+     */
+    @FXML
+    private void handleNewVehicle() {
+    	mainApp.newVehicle(client);
+    	vehicleTable.setItems(mainApp.getVehicleData(client));
+    }
+    
+    /**
+     * Called when the user clicks the garer button. 
+     */
+    @FXML
+    private void handleGarerVehicle() {
+    	Vehicule selectedVehicle = vehicleTable.getSelectionModel().getSelectedItem();
+    	mainApp.garerVehicle(selectedVehicle, client);
+    	vehicleTable.setItems(mainApp.getVehicleData(client));
     }
 }

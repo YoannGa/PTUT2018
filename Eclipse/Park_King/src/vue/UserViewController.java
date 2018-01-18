@@ -1,5 +1,6 @@
 package vue;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -9,6 +10,7 @@ import javafx.scene.control.TableView;
 import modele.Abonne;
 import modele.Client;
 import modele.SuperAbonne;
+import modele.Ticket;
 
 public class UserViewController {
 
@@ -202,7 +204,18 @@ public class UserViewController {
 	    private void handleTicketClient() {
 	        Client selectedClient = clientTable.getSelectionModel().getSelectedItem();
 	        if (selectedClient != null) {
-	            mainApp.showClientTicket(selectedClient);
+	        	ObservableList<Ticket> verifTicket = mainApp.getTicketData(selectedClient);
+	            if (verifTicket.size() != 0) {
+	            	mainApp.showClientTicket(selectedClient);
+	            } else {
+		            Alert alert = new Alert(AlertType.WARNING);
+		            alert.initOwner(mainApp.getPrimaryStage());
+		            alert.setTitle("Ticket");
+		            alert.setHeaderText("Aucun vehicule en attente");
+		            alert.setContentText("Veuillez garer un vehicule avant d'en réccuperer un.");
+
+		            alert.showAndWait();
+	            }
 	        } else {
 	            // Nothing selected.
 	            Alert alert = new Alert(AlertType.WARNING);

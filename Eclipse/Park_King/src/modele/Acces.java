@@ -4,6 +4,10 @@ public class Acces {
 
 	private Camera cam;
 	
+	public Acces(){
+		this.cam = new Camera();
+	}
+	
 	public boolean checkPresenceVehicule() {
 		return this.cam.vehiculePresent();			
 	}

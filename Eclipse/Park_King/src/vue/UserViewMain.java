@@ -18,9 +18,11 @@ import modele.Ticket;
 import modele.TypeVehicule;
 import modele.Vehicule;
 import modele.Abonne;
+import modele.Borne;
 
 public class UserViewMain extends Application {
-
+	
+	private Borne borne;
     private Stage primaryStage;
     private BorderPane rootLayout;
     /**
@@ -40,11 +42,24 @@ public class UserViewMain extends Application {
      * Constructor
      */
     public UserViewMain() {
-        // Add some sample data
-    	Client client = new Client("Alexis");
-    	client.addVehicule(new Vehicule(TypeVehicule.DeuxRoues, "EM963FG"));
-    	client.addVehicule(new Vehicule(TypeVehicule.Voiture, "PL124FK"));
-        clientData.add(client);
+    	borne = new Borne();
+    }
+    
+    /**
+     * Create a new vehicle.
+     */
+    public void newVehicle(Client client) {
+    	Vehicule vehicle = borne.getA().identifierVehicule();
+    	getVehicleData(client).add(vehicle);
+    }
+    
+    /**
+     * Gare the vehicle.
+     */
+    public void garerVehicle(Vehicule vehicle, Client client) {
+    	Ticket ticket = borne.nouveauTicket(vehicle);
+    	getTicketData(client).add(ticket);
+    	borne.activerGarer(ticket);
     }
 
     /**
@@ -73,10 +88,10 @@ public class UserViewMain extends Application {
      */
     public ObservableList<Ticket> getTicketData(Client client) {
     	ArrayList<Ticket> ticketArray = client.getListeTickets();
-    	for(Ticket ticket : ticketArray){
-    		ticketData.add(ticket);
-    	}
-        return ticketData;
+	    for(Ticket ticket : ticketArray){
+	    	ticketData.add(ticket);
+	    }
+	    return ticketData;
     }
 
     @Override

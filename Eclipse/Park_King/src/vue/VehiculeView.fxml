@@ -43,16 +43,18 @@
       				                  <Label text="Type :" GridPane.rowIndex="1" />
                               <Label fx:id="plaqueLabel" text="Label" GridPane.columnIndex="1" />
                               <Label fx:id="typeLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="État :" GridPane.rowIndex="2" />
+                              <Label fx:id="etatLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 				               </children>
 				            </GridPane>
-                        <Button layoutX="14.0" layoutY="130.0" mnemonicParsing="false" prefWidth="60.0" text="Garer" AnchorPane.leftAnchor="20.0" />
+                        <Button layoutX="14.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleGarerVehicle" prefWidth="60.0" text="Garer" AnchorPane.leftAnchor="20.0" />
 		               </children>
 					</AnchorPane>
 		        </items>
 		    </SplitPane>
 		    <AnchorPane maxHeight="40.0" minHeight="20.0" minWidth="0.0" prefHeight="30.0" prefWidth="592.0" SplitPane.resizableWithParent="false">
 		        <children>
-		            <Button mnemonicParsing="false" text="Nouveau Vehicule" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+		            <Button mnemonicParsing="false" onAction="#handleNewVehicle" text="Nouveau Vehicule" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
 		            <Button mnemonicParsing="false" onAction="#handleReturn" text="Retour" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />           
               	</children>
 			</AnchorPane>
