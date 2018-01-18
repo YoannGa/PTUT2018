@@ -38,10 +38,14 @@ public class Ticket {
     	this.id = new SimpleStringProperty(i+"");
     	this.v = v;
     	this.p = p;
-    	this.numEmplacement = num;    	
+    	this.numEmplacement = num;  
     }
     
    
+    public void setClient(Client c) {
+    	this.client = c;
+    }
+    
     public Client getClient() {
     	return this.client;
     }

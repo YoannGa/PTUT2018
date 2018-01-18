@@ -76,9 +76,11 @@ public class Client {
      * @param b
     */
     //## operation dermanderTicket(Borne) 
-    public void demanderTicket(Borne b, Vehicule v) {
-       
-        this.listeTickets.add(b.nouveauTicket(v));
+    public Ticket demanderTicket(Borne b, Vehicule v) {
+       Ticket t = b.nouveauTicket(v);
+       t.setClient(this);
+        this.listeTickets.add(t);
+        return t;
     }
     
     /**

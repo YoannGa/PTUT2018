@@ -76,13 +76,12 @@ public class Borne {
     
     
     /**
-     * @param c
     */
     //## operation nouveauTicket(Client) 
     public Ticket nouveauTicket(Vehicule v) {    	
     	Parking p = this.tp.assignerParking(v);
     	int emplacement = this.tp.assignerNewEmplacement(v, p);
-    	Ticket t = new Ticket( v, p, emplacement);  
+    	Ticket t = new Ticket( v, p, emplacement); 
     	return t;    	
     }
     
