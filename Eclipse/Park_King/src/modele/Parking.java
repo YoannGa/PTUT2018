@@ -13,6 +13,9 @@ package modele;
 import java.util.HashMap;
 import java.util.HashSet;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 //----------------------------------------------------------------------------
 // Default/DC_Parking.java                                                                  
 //----------------------------------------------------------------------------
@@ -41,6 +44,8 @@ public class Parking {
     
     protected int nbPoidsLourdsMax;
     
+    protected StringProperty id;
+    
    
     /*
     protected DC_Teleporteur itsDC_Teleporteur;		//## link itsDC_Teleporteur 
@@ -53,6 +58,10 @@ public class Parking {
     
     
     public Parking(int nbEmplacementVoitures, int nbEmplacementDeuxRoues, int nbEmplacementPoidsLourds) {
+    	int ident = (int) (Math.random()*100);    	
+    	this.id = new SimpleStringProperty(ident+"");
+    	
+    	
     	this.listeVoitures = new HashMap<>();
     	this.listeDeuxRoues = new HashMap<>();
     	this.listePoidsLourds = new HashMap<>();    	
@@ -234,6 +243,16 @@ public class Parking {
 
 	public void setEmplacementsLourds(HashSet<Integer> emplacementsLourds) {
 		this.emplacementsLourds = emplacementsLourds;
+	}
+	public StringProperty getId() {
+		return id;
+	}
+
+	public String getIdString() {
+		return this.id.get();
+	}
+	public void setId(StringProperty id) {
+		this.id = id;
 	}
 
 }
