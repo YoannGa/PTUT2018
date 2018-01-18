@@ -10,6 +10,8 @@
 
 package modele;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 //----------------------------------------------------------------------------
 // Default/DC_Ticket.java                                                                  
@@ -21,6 +23,7 @@ package modele;
 //## class DC_Ticket 
 public class Ticket {
 	
+	protected StringProperty id;
 	protected Vehicule v;
     
     protected Parking p;		//## attribute p 
@@ -30,6 +33,8 @@ public class Ticket {
     protected Client client;
     
     public Ticket(Vehicule v, Parking p, int num) {
+    	int i = (int) (Math.random()*1000);    	
+    	this.id = new SimpleStringProperty(i+"");
     	this.v = v;
     	this.p = p;
     	this.numEmplacement = num;    	
@@ -65,6 +70,16 @@ public class Ticket {
 		this.numEmplacement = numEmplacement;
 	}
     
+	public StringProperty getId() {
+		return id;
+	}
+
+	public String getIdString() {
+		return this.id.get();
+	}
+	public void setId(StringProperty id) {
+		this.id = id;
+	}
 }
 /*********************************************************************
 	File Path	: DefaultComponent/DefaultConfig/Default/DC_Ticket.java
