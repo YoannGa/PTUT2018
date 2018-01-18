@@ -12,7 +12,7 @@ import modele.SuperAbonne;
 
 public class UserViewController {
 
-	 @FXML
+		@FXML
 	    private TableView<Client> clientTable;
 	    @FXML
 	    private TableColumn<Client, String> clientList;
@@ -50,6 +50,18 @@ public class UserViewController {
 	    }
 	    
 	    /**
+	     * Is called by the main application to give a reference back to itself.
+	     * 
+	     * @param mainApp
+	     */
+	    public void setMainApp(UserViewMain mainApp) {
+	        this.mainApp = mainApp;
+
+	        // Add observable list data to the table
+	        clientTable.setItems(mainApp.getClientData());
+	    }
+	    
+	    /**
 	     * Fills all text fields to show details about the client.
 	     * If the specified client is null, all text fields are cleared.
 	     *
@@ -76,18 +88,6 @@ public class UserViewController {
 	            typeLabel.setText("");
 	        }
 	    }
-
-	    /**
-	     * Is called by the main application to give a reference back to itself.
-	     * 
-	     * @param mainApp
-	     */
-	    public void setMainApp(UserViewMain mainApp) {
-	        this.mainApp = mainApp;
-
-	        // Add observable list data to the table
-	        clientTable.setItems(mainApp.getClientData());
-	    }
 	    
 	    /**
 	     * Called when the user clicks on the delete button.
@@ -110,7 +110,7 @@ public class UserViewController {
 	    }
 	    
 	    /**
-	     * Called when the user clicks the new button. Opens a dialog to edit
+	     * Called when the user clicks the new client button. Opens a dialog to edit
 	     * details for a new client.
 	     */
 	    @FXML
@@ -118,19 +118,33 @@ public class UserViewController {
 	        Client tempClient = new Client();
 	        boolean okClicked = mainApp.showClientEditDialog(tempClient);
 	        if (okClicked) {
-	        	
-	        	/* IL FAUT CREER SELON LE TYPE COCHÉ dans edit.
-	            if(isType == "Super Abonné") { 
-	            	
-	            } else {
-	            	if(isType == "Abonné") { 
-
-		            } else {
-			            mainApp.getClientData().add(tempClient);
-		            }
-	            }
-	            */
 	            mainApp.getClientData().add(tempClient);
+	        }
+	    }
+	    
+	    /**
+	     * Called when the user clicks the new abonne button. Opens a dialog to edit
+	     * details for a new abonne.
+	     */
+	    @FXML
+	    private void handleNewAbonne() {
+	        Client tempAbonne = new Abonne();
+	        boolean okClicked = mainApp.showClientEditDialog(tempAbonne);
+	        if (okClicked) {
+	            mainApp.getClientData().add(tempAbonne);
+	        }
+	    }
+	    
+	    /**
+	     * Called when the user clicks the new super abo button. Opens a dialog to edit
+	     * details for a new super abonne.
+	     */
+	    @FXML
+	    private void handleNewSupAbonne() {
+	        Client tempSupAbonne = new SuperAbonne();
+	        boolean okClicked = mainApp.showClientEditDialog(tempSupAbonne);
+	        if (okClicked) {
+	            mainApp.getClientData().add(tempSupAbonne);
 	        }
 	    }
 
@@ -158,5 +172,48 @@ public class UserViewController {
 	            alert.showAndWait();
 	        }
 	    }
+	    
+	    /**
+	     * Called when the user clicks the se garer button. Opens a dialog to manage
+	     * vehicle for the selected client.
+	     */
+	    @FXML
+	    private void handleVehicleClient() {
+	        Client selectedClient = clientTable.getSelectionModel().getSelectedItem();
+	        if (selectedClient != null) {
+	            mainApp.showClientVehicle(selectedClient);
+	        } else {
+	            // Nothing selected.
+	            Alert alert = new Alert(AlertType.WARNING);
+	            alert.initOwner(mainApp.getPrimaryStage());
+	            alert.setTitle("Vehicule");
+	            alert.setHeaderText("Aucun client sélectionné");
+	            alert.setContentText("Veuillez sélectionner un client.");
+
+	            alert.showAndWait();
+	        }
+	    }
+	    
+	    /**
+	     * Called when the user clicks the se garer button. Opens a dialog to manage
+	     * vehicle for the selected client.
+	     */
+	    @FXML
+	    private void handleTicketClient() {
+	        Client selectedClient = clientTable.getSelectionModel().getSelectedItem();
+	        if (selectedClient != null) {
+	            mainApp.showClientTicket(selectedClient);
+	        } else {
+	            // Nothing selected.
+	            Alert alert = new Alert(AlertType.WARNING);
+	            alert.initOwner(mainApp.getPrimaryStage());
+	            alert.setTitle("Ticket");
+	            alert.setHeaderText("Aucun client sélectionné");
+	            alert.setContentText("Veuillez sélectionner un client.");
+
+	            alert.showAndWait();
+	        }
+	    }
+
 }
 	

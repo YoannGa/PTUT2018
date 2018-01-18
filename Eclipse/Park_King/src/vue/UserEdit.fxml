@@ -19,7 +19,7 @@
                <items>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="293.0">
                      <children>
-                        <GridPane layoutX="23.0" layoutY="25.0" prefHeight="157.0" prefWidth="558.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                        <GridPane layoutX="20.0" layoutY="27.0" prefHeight="157.0" prefWidth="558.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="70.0">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="112.0" />
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="476.0" minWidth="10.0" prefWidth="476.0" />
@@ -33,19 +33,17 @@
                            <children>
                               <Label prefHeight="48.0" prefWidth="175.0" text="Nom :" />
                               <Label text="Type :" GridPane.rowIndex="2" />
-                              <RadioButton fx:id="clientBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="Sans abonnement" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <RadioButton fx:id="clientBtn" disable="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="Sans abonnement" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <toggleGroup>
                                     <ToggleGroup fx:id="type" />
                                  </toggleGroup></RadioButton>
-                              <RadioButton fx:id="abonneBtn" mnemonicParsing="false" prefHeight="18.0" prefWidth="131.0" text="Abonné" toggleGroup="$type" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <RadioButton fx:id="superAboBtn" mnemonicParsing="false" prefHeight="18.0" prefWidth="137.0" text="Super abonné" toggleGroup="$type" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <RadioButton fx:id="abonneBtn" disable="true" mnemonicParsing="false" prefHeight="18.0" prefWidth="131.0" text="Abonné" toggleGroup="$type" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <RadioButton fx:id="superAboBtn" disable="true" mnemonicParsing="false" prefHeight="18.0" prefWidth="137.0" text="Super abonné" toggleGroup="$type" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                               <TextField fx:id="nameField" prefHeight="25.0" prefWidth="100.0" GridPane.columnIndex="1" />
                            </children>
                         </GridPane>
-                        <Button layoutX="50.0" layoutY="227.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Ajouter Voiture" AnchorPane.rightAnchor="451.0" />
-                        <Button layoutX="47.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Ajouter ticket" />
-                        <Button layoutX="433.0" layoutY="332.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="25.0" prefWidth="60.0" text="Valider" />
-                        <Button layoutX="509.0" layoutY="332.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="60.0" text="Annuler" />
+                        <Button layoutX="425.0" layoutY="313.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="25.0" prefWidth="60.0" text="Valider" AnchorPane.bottomAnchor="60.0" />
+                        <Button layoutX="504.0" layoutY="313.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="60.0" text="Annuler" AnchorPane.bottomAnchor="60.0" />
                      </children>
                   </AnchorPane>
                </items>

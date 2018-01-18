@@ -22,7 +22,9 @@
                       <TableColumn fx:id="clientList" prefWidth="294.0" text="Client" />
                     </columns>
                   </TableView>
-                  <Button mnemonicParsing="false" onAction="#handleNewClient" text="Nouveau Client" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <Button layoutX="14.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleNewClient" prefHeight="25.0" prefWidth="90.0" text="+ Client" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="192.0" />
+                  <Button layoutX="108.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleNewAbonne" prefHeight="25.0" prefWidth="90.0" text="+ Abonné" />
+                  <Button layoutX="206.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleNewSupAbonne" prefHeight="25.0" prefWidth="90.0" text="+ Super Abo." AnchorPane.rightAnchor="5.0" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
@@ -59,8 +61,8 @@
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
-                              <Button layoutX="5.0" layoutY="15.0" mnemonicParsing="false" text="Se garer" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="15.0" />
-                              <Button layoutY="26.0" mnemonicParsing="false" text="Recuperer Voiture" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                              <Button layoutX="5.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleVehicleClient" text="Se garer" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="15.0" />
+                              <Button layoutY="26.0" mnemonicParsing="false" onAction="#handleTicketClient" text="Recuperer Voiture" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
                            </children>
                         </AnchorPane>
                     </items>

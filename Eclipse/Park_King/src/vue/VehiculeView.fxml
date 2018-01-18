@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vue.VehicleController">
    <children>
       <SplitPane dividerPositions="0.9045226130653267" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -19,16 +19,16 @@
 		        <items>
 		        	<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
 		        		<children>
-							<TableView prefHeight="398.0" prefWidth="295.0">
+							<TableView fx:id="vehicleTable" prefHeight="398.0" prefWidth="295.0">
 				        		<columns>
-				          		   	<TableColumn prefWidth="294.0" text="Vehicules" />
+				          		   	<TableColumn fx:id="vehicleList" prefWidth="294.0" text="Vehicules" />
 				          		</columns>
 				        	</TableView>
 		            	</children>
 					</AnchorPane>
 		          	<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
 		        		<children>			
-				            <GridPane layoutX="16.0" layoutY="2.0">
+				            <GridPane layoutX="16.0" layoutY="2.0" prefHeight="90.0" prefWidth="265.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
 				               <columnConstraints>
 				                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 				                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -42,17 +42,20 @@
 				                  <Label prefHeight="48.0" prefWidth="175.0" text="Plaque :" />
 				                  <Label text="Longueur :" GridPane.rowIndex="1" />
 				                  <Label text="Largeur :" GridPane.rowIndex="2" />
+                              <Label fx:id="plaqueLabel" text="Label" GridPane.columnIndex="1" />
+                              <Label fx:id="longueurLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="largeurLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 				               </children>
 				            </GridPane>
-                        <Button layoutX="13.0" layoutY="96.0" mnemonicParsing="false" text="Garer" />
+                        <Button layoutX="14.0" layoutY="130.0" mnemonicParsing="false" prefWidth="60.0" text="Garer" AnchorPane.leftAnchor="20.0" />
 		               </children>
 					</AnchorPane>
 		        </items>
 		    </SplitPane>
 		    <AnchorPane maxHeight="40.0" minHeight="20.0" minWidth="0.0" prefHeight="30.0" prefWidth="592.0" SplitPane.resizableWithParent="false">
 		        <children>
-		            <Button mnemonicParsing="false" text="Nouveau Veicule" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
-		            <Button mnemonicParsing="false" text="Retour" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />           
+		            <Button mnemonicParsing="false" text="Nouveau Vehicule" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+		            <Button mnemonicParsing="false" onAction="#handleReturn" text="Retour" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />           
               	</children>
 			</AnchorPane>
         </items>

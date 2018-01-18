@@ -1,6 +1,7 @@
 package vue;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -13,6 +14,8 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import modele.Client;
 import modele.SuperAbonne;
+import modele.TypeVehicule;
+import modele.Vehicule;
 import modele.Abonne;
 
 public class UserViewMain extends Application {
@@ -23,20 +26,20 @@ public class UserViewMain extends Application {
      * The data as an observable list of clients.
      */
     private ObservableList<Client> clientData = FXCollections.observableArrayList();
-
+    /**
+     * The data as an observable list of vehicles.
+     */
+    private ObservableList<Vehicule> vehicleData = FXCollections.observableArrayList();
+    
     /**
      * Constructor
      */
     public UserViewMain() {
         // Add some sample data
-        clientData.add(new Client("Lydia"));
-        clientData.add(new Client("Clarisse"));
-        clientData.add(new Client("Yoann"));
-        
-        clientData.add(new Abonne("Anna"));
-        
-        clientData.add(new SuperAbonne("Stefan"));
-        clientData.add(new SuperAbonne("Arnaud"));
+    	Client client = new Client("Alexis");
+    	client.addVehicule(new Vehicule(TypeVehicule.DeuxRoues, "EM963FG"));
+    	client.addVehicule(new Vehicule(TypeVehicule.Voiture, "PL124FK"));
+        clientData.add(client);
     }
 
     /**
@@ -45,6 +48,18 @@ public class UserViewMain extends Application {
      */
     public ObservableList<Client> getClientData() {
         return clientData;
+    }
+    
+    /**
+     * Returns the data as an observable list of vehicles. 
+     * @return
+     */
+    public ObservableList<Vehicule> getVehicleData(Client client) {
+    	ArrayList<Vehicule> vehicleArray = client.getListeVehicule();
+    	for(Vehicule vehicle : vehicleArray){
+    		vehicleData.add(vehicle);
+    	}
+        return vehicleData;
     }
 
     @Override
@@ -132,6 +147,56 @@ public class UserViewMain extends Application {
         } catch (IOException e) {
             e.printStackTrace();
             return false;
+        }
+    }
+    
+    /**
+     * Opens a dialog to manage vehicle of the specified client.
+     *
+     * @param client the client object to be edited
+     */
+    public void showClientVehicle(Client client) {
+        try {
+            // Load the fxml file and create a new stage for the popup dialog.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(UserViewMain.class.getResource("VehiculeView.fxml"));
+            AnchorPane vehiculeView = (AnchorPane) loader.load();
+
+            // Create the dialog Stage.
+            rootLayout.setCenter(vehiculeView);
+
+            // Set the client into the controller.
+            VehicleController controller = loader.getController();
+            controller.setClient(client);
+            controller.setMainApp(this);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    /**
+     * Opens a dialog to manage vehicle of the specified client.
+     *
+     * @param client the client object to be edited
+     */
+    public void showClientTicket(Client client) {
+        try {
+            // Load the fxml file and create a new stage for the popup dialog.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(UserViewMain.class.getResource("TicketView.fxml"));
+            AnchorPane ticketView = (AnchorPane) loader.load();
+
+            // Create the dialog Stage.
+            rootLayout.setCenter(ticketView);
+
+            // Set the client into the controller.
+            TicketController controller = loader.getController();
+            controller.setMainApp(this);
+            controller.setClient(client);
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

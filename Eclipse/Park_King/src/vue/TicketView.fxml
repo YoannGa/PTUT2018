@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vue.TicketController">
    <children>
       <SplitPane dividerPositions="0.9045226130653267" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -29,7 +29,7 @@
 					</AnchorPane>
 		          	<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
 		        		<children>			
-				            <GridPane layoutX="20.0" layoutY="6.0">
+				            <GridPane layoutX="20.0" layoutY="6.0" prefHeight="90.0" prefWidth="253.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
 				               <columnConstraints>
 				                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 				                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -43,19 +43,22 @@
 				                  <Label prefHeight="48.0" prefWidth="175.0" text="Parking :" />
 				                  <Label text="N° Place :" GridPane.rowIndex="1" />
 				                  <Label text="Vehicule : " GridPane.rowIndex="2" />
+                              <Label text="Label" GridPane.columnIndex="1" />
+                              <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 				               </children>
 				            </GridPane>
                         <CheckBox layoutX="26.0" layoutY="119.0" mnemonicParsing="false" text="Maintenance" />
                         <CheckBox layoutX="26.0" layoutY="158.0" mnemonicParsing="false" text="Entretien" />
-                        <Button layoutX="24.0" layoutY="190.0" mnemonicParsing="false" text="Recuperer Vehicule" />
-                        <Button layoutX="24.0" layoutY="227.0" mnemonicParsing="false" text="Gestion livraison" />
+                        <Button layoutX="24.0" layoutY="196.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Recuperer Vehicule" AnchorPane.leftAnchor="20.0" />
+                        <Button layoutX="24.0" layoutY="230.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Gestion livraison" AnchorPane.leftAnchor="20.0" />
 		               </children>
 					</AnchorPane>
 		        </items>
 		    </SplitPane>
 		    <AnchorPane maxHeight="40.0" minHeight="20.0" minWidth="0.0" prefHeight="30.0" prefWidth="592.0" SplitPane.resizableWithParent="false">
 		        <children>
-		            <Button mnemonicParsing="false" text="Retour" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />           
+		            <Button mnemonicParsing="false" onAction="#handleReturn" text="Retour" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />           
               	</children>
 			</AnchorPane>
         </items>
