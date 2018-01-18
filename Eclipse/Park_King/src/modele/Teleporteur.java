@@ -130,6 +130,10 @@ public class Teleporteur {
     	return emplacement;
     }
     
+    public void addParkingTier(Parking p) {
+    	this.parkingTiers.add(p);
+    }
+    
 }
 /*********************************************************************
 	File Path	: DefaultComponent/DefaultConfig/Default/DC_Teleporteur.java

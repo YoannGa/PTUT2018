@@ -10,6 +10,8 @@
 
 package modele;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 //----------------------------------------------------------------------------
 // Default/DC_Vehicule.java                                                                  
@@ -25,7 +27,7 @@ public class Vehicule {
     
     protected TypeVehicule type;
     
-    protected String imatriculation;		//## attribute imatriculation 
+    protected StringProperty imatriculation;		//## attribute imatriculation 
     
     protected Client itsDC_Client;		//## link itsDC_Client 
     
@@ -43,7 +45,7 @@ public class Vehicule {
     
     public Vehicule(TypeVehicule t, String ima) {    	
     	this.type = t;    	
-    	this.imatriculation = ima;
+    	this.imatriculation = new SimpleStringProperty(ima);
     };
     
     
@@ -65,12 +67,12 @@ public class Vehicule {
 
 	
 
-	public String getImatriculation() {
+	public StringProperty getImatriculation() {
 		return imatriculation;
 	}
 
 	public void setImatriculation(String imatriculation) {
-		this.imatriculation = imatriculation;
+		this.imatriculation.set(imatriculation);
 	}
 
 	public String getHeureDeLivraison() {

@@ -57,7 +57,6 @@ public class Parking {
     	this.listeDeuxRoues = new HashMap<>();
     	this.listePoidsLourds = new HashMap<>();    	
     	
-    	//  A FAIRE : listes de voitures en entretiens (HashMap?) 
     	
     	this.emplacementsVoitures = new HashSet<>();
     	this.emplacementsDeuxRoues = new HashSet<>();
