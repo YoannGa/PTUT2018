@@ -79,7 +79,7 @@ public class Client {
     public Ticket demanderTicket(Borne b, Vehicule v) {
        Ticket t = b.nouveauTicket(v);
        t.setClient(this);
-        this.listeTickets.add(t);
+        
         return t;
     }
     
